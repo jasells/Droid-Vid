@@ -39,7 +39,7 @@ namespace MpegTS
     }
 
     /// <summary>
-    /// Represents a 188 byte chunk of media suitable for streaming
+    /// Represents a 188 byte chunk of media suitable for streaming (a Transport Stream packet)
     /// https://en.wikipedia.org/wiki/MPEG_transport_stream
     /// 
     /// </summary>

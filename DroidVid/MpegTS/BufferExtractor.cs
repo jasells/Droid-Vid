@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace MpegTS
 {
+    /// <summary>
+    /// This class replaces the MediaExtractor class from the Android.Media library to 
+    /// *try* to extract elemental streams from a Mpeg TS.
+    /// </summary>
     public class BufferExtractor
     {
         //this may need to be concurrent queue?

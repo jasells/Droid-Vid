@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MpegTS
 {
     /// <summary>
-    /// Represents a data stream spanning multiple Ts packets.
+    /// Represents a data stream (like video) spanning multiple Ts packets.
     /// 
     /// https://en.wikipedia.org/wiki/Packetized_elementary_stream
     /// </summary>
@@ -145,6 +145,7 @@ namespace MpegTS
 
                 //vidLen += p.data.Length - p.PayloadStart;
 
+                //get a memoryStream to the payload
                 using (var s = p.GetPayload())
                 {
                     if (!start)

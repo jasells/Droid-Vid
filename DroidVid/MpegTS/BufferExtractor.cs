@@ -39,6 +39,8 @@ namespace MpegTS
                 pes = new MpegTS.PacketizedElementaryStream(ts);//we have the new pes
 
                 //let's take care of the old (complete) one now: push out buffers
+                //TODO: provide the time stamp/PES with this buffer, or, just provide the 
+                //PES?
                 outBuffers.Enqueue(lastPes.GetPayload());   
                 
                 //**TODO: raise an event?       

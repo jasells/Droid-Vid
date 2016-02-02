@@ -112,14 +112,14 @@ namespace DroidVid
                     Log.Debug("ExtractorActivity, sampleSize: ", buf.Length.ToString());
 
 
-                    //this is the length of the first sample sent from the mediaExtractor to the decoder in FilePlayer.
-                    //only valid for a specific file!
-                    if (!started && buf.Length != 23239)
-                    {
-                        continue;
-                    }
-                    else
-                        started = true;//try to start where the fileExtractor does.
+                    ////this is the length of the first sample sent from the mediaExtractor to the decoder in FilePlayer.
+                    ////only valid for a specific file!
+                    //if (!started && buf.Length != 23239)
+                    //{
+                    //    continue;
+                    //}
+                    //else
+                    //    started = true;//try to start where the fileExtractor does.
 
                     //get a input buffer index from the decoder for input
                     inIndex = decoder.DequeueInputBuffer(10000);
@@ -142,9 +142,9 @@ namespace DroidVid
 
                         var inB = inputBuffers[inIndex];
 
-                        inB.Put(buffEx.pes.GetPayload());
+                        inB.Put(b);
 
-                        decoder.QueueInputBuffer(inIndex, 0, b.Limit(), buffEx.pes.PTS, MediaCodecBufferFlags.None );
+                        decoder.QueueInputBuffer(inIndex, 0, b.Limit(), 0, MediaCodecBufferFlags.None );
                     }
                     //else
                     //    continue;//we don't have a full video frame, look for more.

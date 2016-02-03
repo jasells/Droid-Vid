@@ -52,7 +52,12 @@ namespace MpegTS
         /// </summary>
         public const byte SyncByte = 0x47;
 
-        public bool IsValid { get { return data[09] == SyncByte; } }
+        public bool IsValid { get { return data[0] == SyncByte; } }
+
+        /// <summary>
+        /// # of trailing zeros in the payload.
+        /// </summary>
+        public int ExtraData { get; private set; }
 
         /// <summary>
         /// indicates error in transport stream
@@ -140,7 +145,7 @@ namespace MpegTS
         {
             int start = PayloadStart;
 
-            int end = data.Length - start;
+            int payloadLen = data.Length - start;
             if (trimTrailingZeros)
             {
                 int last = data.Length - 1;
@@ -149,10 +154,22 @@ namespace MpegTS
                 while (val == 0)
                     val = data[--last];
 
-                end -= (data.Length - last - 1);//don't count trailing zeros in the length
+                //payloadLen = last;
+                payloadLen -= (data.Length - last -1 );//don't count trailing zeros in the length
+
+                //are these trailing zero's part of next packet???
+                int remLen = data.Length - 1 - last;
+
+                if (remLen > 0)
+                {
+                    ExtraData = remLen;
+                    //ExtraData = new byte[remLen];
+
+                    //Buffer.BlockCopy(data, last+1, ExtraData, 0, remLen);
+                }
             }
 
-            return new System.IO.MemoryStream(data, start, end, false);
+            return new System.IO.MemoryStream(data, start, payloadLen, false);
         }
 
         /// <summary>

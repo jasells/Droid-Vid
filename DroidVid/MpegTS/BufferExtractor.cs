@@ -13,7 +13,7 @@ namespace MpegTS
     public class BufferExtractor
     {
         //this may need to be concurrent queue?
-        public Queue<byte[]> outBuffers = new Queue<byte[]>();
+        public Queue<PacketizedElementaryStream> outBuffers = new Queue<PacketizedElementaryStream>();
 
         public MpegTS.PacketizedElementaryStream pes;
 
@@ -34,14 +34,21 @@ namespace MpegTS
 
             else if (ts.IsPayloadUnitStart)
             {
-                var lastPes = pes;//hang onto the now complete pes.
-
-                pes = new MpegTS.PacketizedElementaryStream(ts);//we have the new pes
+                //var lastPes = pes;//hang onto the now complete pes.
 
                 //let's take care of the old (complete) one now: push out buffers
                 //TODO: provide the time stamp/PES with this buffer, or, just provide the 
                 //PES?
-                outBuffers.Enqueue(lastPes.GetPayload());   
+                if (pes.IsValid && pes.IsComplete)
+                {
+                    outBuffers.Enqueue(pes);
+                    ++Good;
+                }
+                else
+                    ++Bad;
+
+                pes = new MpegTS.PacketizedElementaryStream(ts);//we have the new pes
+                
                 
                 //**TODO: raise an event?       
             }
@@ -52,6 +59,10 @@ namespace MpegTS
             else//looking for a start packet
                 ;//recycle the ts?            
         }
+
+        public int Good;
+        public int Bad;
+        
 
         public Task AddRawAsync(byte[] data)
         {

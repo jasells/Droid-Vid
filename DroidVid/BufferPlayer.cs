@@ -53,7 +53,7 @@ namespace DroidVid
             running = true;
             var finfo = new System.IO.FileInfo(FilePlayer.SAMPLE);
             var fs = finfo.OpenRead();
-            int bytes, inIndex =0;
+            int bytes, count, inIndex =0;
             int buffSize = 188;
             var buff = new byte[buffSize];
             var ts = new MpegTS.TsPacket(buff);
@@ -64,6 +64,7 @@ namespace DroidVid
 
             using (fs)
             {
+                count = 0;
                 Log.Debug(TAG, "looking for format info");
 
                 ////look for the format info.
@@ -93,22 +94,42 @@ namespace DroidVid
 
                 Log.Debug(TAG, "looking for start of stream");
 
+                //do
+                //{
+                //    bytes = await fs.ReadAsync(buff, 0, buff.Length);
+
+                //} while (!ts.IsPayloadUnitStart);
+                //buffEx.AddRaw(buff);
 
                 sw.Start();
                 bool started = false;
                 do
                 {
-                    while (buffEx.outBuffers.Count == 0)
+                    ++count;
+                    try
                     {
-                        //we need a new buffer every loop!
-                        buff = new byte[188];
-                        bytes = await fs.ReadAsync(buff, 0, buff.Length);
+                        while (buffEx.outBuffers.Count == 0 && fs.CanRead)
+                        {
+                            //we need a new buffer every loop!
+                            buff = new byte[188];
+                            bytes = await fs.ReadAsync(buff, 0, buff.Length);
 
-                        //push the raw data to our custom extractor
-                        buffEx.AddRaw(buff);
+                            //push the raw data to our custom extractor
+                            buffEx.AddRaw(buff);
+                        }
+
+                        if (!fs.CanRead)
+                            return;
+                    }
+                    catch(Exception ex)
+                    {
+                        Log.Error("ExtractorActivity error: ", ex.ToString());
                     }
 
-                    var buf = buffEx.outBuffers.Dequeue();
+                    if (count < 4)
+                        continue;
+
+                    var buf = buffEx.outBuffers.Dequeue().GetPayload();
                     Log.Debug("ExtractorActivity, sampleSize: ", buf.Length.ToString());
 
 

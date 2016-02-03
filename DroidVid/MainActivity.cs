@@ -17,7 +17,7 @@ namespace DroidVid
     {
         //not sure this is right... but...
         private static string dir = "/Removable/MicroSD/";//"/mnt/shared/extSdCard/";//
-        private static String SAMPLE = dir + "Video_2014_5_7__15_33_44.mpg";//"Video_2014_5_6__16_51_56.mp4";//dir+"Video_2014_5_6__16_51_56.mp4";//
+        private static String SAMPLE = dir + "Video_2014_5_6__15_55_19.mpg";//"Video_2014_5_7__15_33_44.mpg";//
         //private static string SAMPLE = "udp://@127.0.0.1:12345";
         //Android.OS.Environment.ExternalStorageDirectory.ToString() + "/video.mp4";
         //FilePlayer mPlayer;
@@ -81,8 +81,9 @@ namespace DroidVid
             if (mPlayer == null)
             {
 
-                mPlayer = new FilePlayer(holder.Surface);//this works
+                //mPlayer = new FilePlayer(holder.Surface);//this works
                 //mPlayer = new BufferPlayer(holder.Surface);//this doesn't
+                mPlayer = new FilePlayer2(holder.Surface);//this is only for debugging
 
                 mPlayer.RunAsync();
             }

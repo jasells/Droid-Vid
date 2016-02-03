@@ -199,7 +199,11 @@ namespace DroidVid
                             if (inIndex >= 0)
                             {
                                 var buffer = inputBuffers[inIndex];// decoder.GetInputBuffer(inIndex);
-                                int sampleSize = extractor.ReadSampleData(buffer, 0);
+                                if(buffer.Position() != 0)
+                                    Log.Debug("inBuff.Position: ", buffer.Position().ToString());
+                                Log.Debug("inBuff: ", buffer.ToString());
+
+                                int sampleSize = extractor.ReadSampleData(buffer, buffer.Position());
                                 if (sampleSize < 0)
                                 {
                                     // We shouldn't stop the playback at this point, just pass the EOS

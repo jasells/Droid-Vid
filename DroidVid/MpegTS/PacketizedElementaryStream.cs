@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Debug = System.Diagnostics.Debug;
 
 namespace MpegTS
 {
@@ -34,7 +35,7 @@ namespace MpegTS
         {
             get
             {
-                return//must look after the start code 4 bytes
+                return
                     BitConverter.ToUInt16(Header, packets.Peek().PayloadStart + 4);
             }
         }
@@ -45,10 +46,30 @@ namespace MpegTS
         }
         private int payloadIndex;
 
+
+        public bool IsComplete { get; private set; }
+        /// <summary>
+        /// Continuity counter is used to track if TS packets are missing.
+        /// For TS packet 0...n, TSn+1.CC == (TSn.CC + 1)
+        /// </summary>
+        private int lastCC;
+
+        public bool IsValid
+        {
+            get
+            {
+                return BitConverter.ToUInt32(Header, packets.Peek().PayloadStart) == VideoStartCode;
+            }
+        }
+
         public PacketizedElementaryStream(TsPacket first)
         {
+            IsComplete = true;//we assume it is complete until we prove it is not
+
             packets = new Queue<TsPacket>(4);
             packets.Enqueue(first);
+
+            lastCC = first.ContinuityCounter;
 
             payloadIndex = first.PayloadStart;
         }
@@ -61,6 +82,16 @@ namespace MpegTS
         {
             packets.Enqueue(next);
 
+            //check for missed packets
+            if (lastCC < 15 &&
+                next.ContinuityCounter != lastCC + 1)
+            {
+                IsComplete = false;
+            }
+            else if (lastCC == 15 && next.ContinuityCounter != 0)
+                IsComplete = false;
+
+            lastCC = next.ContinuityCounter;
         }
 
         /// <summary>
@@ -126,6 +157,10 @@ namespace MpegTS
 
             //for now, let's just try to strip out all the header bytes, leaving only video stream bytes
 
+            if (!IsValid)//we don't have a PES start code!
+                return new byte[0];
+
+            //**TODO: need error checking on header!
             int startOfPayload = PayloadStart;//get this now, so we don't try to access the queue later.
 
             //start with this packet's payload len...

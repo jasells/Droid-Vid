@@ -39,7 +39,7 @@ namespace MpegTS
                 //let's take care of the old (complete) one now: push out buffers
                 //TODO: provide the time stamp/PES with this buffer, or, just provide the 
                 //PES?
-                if (pes.IsValid && pes.IsComplete)
+                if (pes.IsValid )//&& pes.IsComplete)
                 {
                     outBuffers.Enqueue(pes);
                     ++Good;

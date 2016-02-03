@@ -162,7 +162,13 @@ namespace DroidVid
                         var b = Java.Nio.ByteBuffer.Wrap(buf);
 
                         var inB = inputBuffers[inIndex];
-
+                        //*************
+                        //THE BUFFER *******MUST********* be CLEARED before each write,
+                        //else when the buffers start getting recycled, the decoder will
+                        //read past the end of the current data into old data!
+                        //This may cause tearing of the picture, or even a complete 
+                        //crash of the app from antive errors!!!!!
+                        inB.Clear();
                         inB.Put(b);
 
                         decoder.QueueInputBuffer(inIndex, 0, b.Limit(), 0, MediaCodecBufferFlags.None );

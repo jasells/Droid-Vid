@@ -160,7 +160,6 @@ namespace MpegTS
             if (!IsValid)//we don't have a PES start code!
                 return new byte[0];
 
-            //**TODO: need error checking on header!
             int startOfPayload = PayloadStart;//get this now, so we don't try to access the queue later.
 
             //start with this packet's payload len...
@@ -168,6 +167,7 @@ namespace MpegTS
             //int vidLen = firstLen;
             TsPacket p;
             var ms = new System.IO.MemoryStream(firstLen*packets.Count);//try to get an estimate of the size needed to avoid re-sizing
+            
 
             //create a tmp que to stuff the packets back into so we don't lose them
             Queue<TsPacket> tmpQ = new Queue<TsPacket>(packets.Count);
@@ -186,13 +186,13 @@ namespace MpegTS
                     if (!start)
                     {
 
-                        if (packets.Count > 0)
+                        //if (packets.Count > 0)
                             s.CopyTo(ms);//no PES header stuff in following packets
-                        else//need to trim trailing 0's
-                        {
-                            using (var s2 = p.GetPayload(true))
-                                s2.CopyTo(ms);
-                        }
+                        //else//need to trim trailing 0's
+                        //{
+                        //    using (var s2 = p.GetPayload(false))
+                        //        s2.CopyTo(ms);
+                        //}
                     }
                     else//first packet
                     {

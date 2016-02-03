@@ -129,6 +129,7 @@ namespace DroidVid
                     if (count < 4)
                         continue;
 
+                    //get the raw video stream, stripped of Mpeg TS headers
                     var buf = buffEx.outBuffers.Dequeue().GetPayload();
                     Log.Debug("ExtractorActivity, sampleSize: ", buf.Length.ToString());
 
@@ -172,6 +173,9 @@ namespace DroidVid
                         inB.Put(b);
 
                         decoder.QueueInputBuffer(inIndex, 0, b.Limit(), 0, MediaCodecBufferFlags.None );
+
+                        b.Dispose();//clean up
+                        
                     }
                     //else
                     //    continue;//we don't have a full video frame, look for more.

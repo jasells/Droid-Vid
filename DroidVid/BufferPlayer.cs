@@ -123,7 +123,14 @@ namespace DroidVid
                                             .ConfigureAwait(false);
 
                             //push the raw data to our custom extractor
-                            buffEx.AddRaw(buff);
+                            if (!buffEx.AddRaw(buff))
+                            {
+                                Log.Debug("ExtractorActivity,   "," ----------bad TS packet!");
+
+                                //find next sync byte and try again
+                                fs.Position -= buff.Length
+                                              - buff.ToList().IndexOf(MpegTS.TsPacket.SyncByte);
+                            }
                         }
 
                         if (!fs.CanRead || eof)

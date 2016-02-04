@@ -58,7 +58,11 @@ namespace MpegTS
         {
             get
             {
-                return BitConverter.ToUInt32(Header, packets.Peek().PayloadStart) == VideoStartCode;
+                int start = packets.Peek().PayloadStart;
+                if (start < 4 || start+4 > Header.Length)
+                    return false;
+                else
+                    return BitConverter.ToUInt32(Header, packets.Peek().PayloadStart) == VideoStartCode;
             }
         }
 

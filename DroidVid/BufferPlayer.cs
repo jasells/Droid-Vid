@@ -58,6 +58,7 @@ namespace DroidVid
             var buff = new byte[buffSize];
             var ts = new MpegTS.TsPacket(buff);
             var buffEx = new BufferExtractor();
+            bool eof = false;
 
             var info = new Android.Media.MediaCodec.BufferInfo();
             var sw = new System.Diagnostics.Stopwatch();
@@ -111,7 +112,10 @@ namespace DroidVid
                         while (buffEx.outBuffers.Count == 0 && fs.CanRead)
                         {
                             if (fs.Length - fs.Position < 188)
-                                return;//we're @ EOF
+                            {
+                                eof = true;
+                                break;//we're @ EOF
+                            }
 
                             //we need a new buffer every loop!
                             buff = new byte[188];
@@ -122,8 +126,8 @@ namespace DroidVid
                             buffEx.AddRaw(buff);
                         }
 
-                        if (!fs.CanRead)
-                            return;
+                        if (!fs.CanRead || eof)
+                            break;
                     }
                     catch(Exception ex)
                     {
@@ -205,22 +209,13 @@ namespace DroidVid
                             var buffer = outputBuffers[outIndex];// decoder.GetOutputBuffer(outIndex);
                             Android.Util.Log.Verbose("DecodeActivity", "We can't use this buffer but render it due to the API limit, " + buffer);
 
+                            //bool gcDone = false;
                             // We use a very simple clock to keep the video FPS, or the video
                             // playback will be too fast
                             //This causes the next frame to not be rendered too quickly.
-                            while (info.PresentationTimeUs / 1000 > sw.ElapsedMilliseconds )
+                            while (info.PresentationTimeUs / 1000 > sw.ElapsedMilliseconds)
                             {
-                                try
-                                {
-                                    await Task.Delay(10).ConfigureAwait(false);
-                                    //sleep(10);
-                                }
-                                catch (Exception e)
-                                {
-                                    //e.printStackTrace();
-                                    System.Diagnostics.Debug.WriteLine(e.StackTrace);
-                                    break;
-                                }
+                                await Task.Delay(10).ConfigureAwait(false);
                             }
                             //the decoder won't advance without this...
                             //must be called before the next decoder.dequeue call

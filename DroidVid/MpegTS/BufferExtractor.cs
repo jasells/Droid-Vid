@@ -70,7 +70,7 @@ namespace MpegTS
                 pes.Add(ts);
             }
             else//looking for a start packet
-                ;//recycle the ts?            
+                ;//           
 
             return true;
         }

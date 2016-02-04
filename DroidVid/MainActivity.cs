@@ -17,7 +17,7 @@ namespace DroidVid
     {
         //not sure this is right... but...
         private static string dir = "/Removable/MicroSD/";//"/mnt/shared/extSdCard/";//
-        private static String SAMPLE = dir + "Video_2014_5_6__15_55_19.mpg";//"Video_2014_5_7__15_33_44.mpg";//
+        private static String SAMPLE = dir + "Video_2014_5_8__9_12_35.mpg";//"Video_2014_5_6__15_55_19.mpg";//"Video_2014_5_7__15_33_44.mpg";//
         //private static string SAMPLE = "udp://@127.0.0.1:12345";
         //Android.OS.Environment.ExternalStorageDirectory.ToString() + "/video.mp4";
         //FilePlayer mPlayer;
@@ -49,7 +49,7 @@ namespace DroidVid
             //create the surface view for drawing to, and wire up callbacks(events)
             var sv = new SurfaceView(this);
             sv.Holder.AddCallback(this);
-
+            sv.KeepScreenOn = true;
 
             //System.IO.DirectoryInfo dinf = new System.IO.DirectoryInfo(dir);
             //var dirs = dinf.Root.GetDirectories();

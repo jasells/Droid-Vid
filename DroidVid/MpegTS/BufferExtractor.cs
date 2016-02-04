@@ -7,15 +7,22 @@ using System.Threading.Tasks;
 namespace MpegTS
 {
 
+    public interface ISampleReadyCallback
+    {
+        void SampleReadyCallbackHandler(int count);
+    }
+
     /// <summary>
     /// This class replaces the MediaExtractor class from the Android.Media library to 
     /// *try* to extract elemental streams from a Mpeg TS.
     /// </summary>
     public class BufferExtractor
     {
-
+        public delegate void SampleReadyCallback(int count);
 
         private volatile int good, bad;
+
+        public ISampleReadyCallback Callback{get; set;}
 
         /// <summary>
         /// running count of # good PES samples found
@@ -47,16 +54,17 @@ namespace MpegTS
         /// this event is raised when the extractor has found a complete sample <para/>
         /// <see cref="PacketizedElementaryStream"/>(re-assembled PES).
         /// </summary>
-        public event EventHandler<int> SampleReady;
+        public event SampleReadyCallback SampleReady;
 
         protected void OnSampleReady(int count, long pts)
         {
-            var del = SampleReady;//get the CB delegate
+            var del = Callback;//get the CB delegate
 
             if (del != null)
                 try
                 {
-                    del(this, count);
+                    if(count > 0)
+                        del.SampleReadyCallbackHandler( count);    
                 }
                 catch (Exception ex)
                 {

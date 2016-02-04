@@ -82,8 +82,8 @@ namespace DroidVid
             {
 
                 //mPlayer = new FilePlayer(holder.Surface);//this works
-                mPlayer = new BufferPlayer(holder.Surface);//this doesn't
-                //mPlayer = new FilePlayer2(holder.Surface);//this is only for debugging
+                //mPlayer = new BufferPlayer2(holder.Surface);//this doesn't
+                mPlayer = new BufferPlayer(holder.Surface);//this is only for debugging
 
                 mPlayer.RunAsync();
             }

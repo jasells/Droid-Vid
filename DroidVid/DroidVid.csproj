@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BufferPlayer.cs" />
+    <Compile Include="BufferPlayer2.cs" />
     <None Include="FilePlayer2.cs" />
     <Compile Include="FilePlayer.cs" />
     <Compile Include="MainActivity.cs" />

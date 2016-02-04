@@ -183,7 +183,7 @@ namespace DroidVid
                         //else when the buffers start getting recycled, the decoder will
                         //read past the end of the current data into old data!
                         //This may cause tearing of the picture, or even a complete 
-                        //crash of the app from antive errors!!!!!
+                        //crash of the app from internal errors in native decoder code!!!!!
                         inB.Clear();
                         inB.Put(b);
 

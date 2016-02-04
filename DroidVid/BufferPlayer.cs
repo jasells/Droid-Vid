@@ -38,12 +38,15 @@ namespace DroidVid
 
             decoder = MediaCodec.CreateDecoderByType("video/avc");
 
+            //these are custom/dependant upon the source of the video
+            //**TODO: search for and find them @ runtime. (it is not hard to do), but that
+            //can cause a slight delay in initial video rendering.
             var sps = new byte[] { 0, 0, 0, 1, 103, 66, 224, 30, 218, 2, 208, 246, 192, 68, 0, 0, 46, 236, 0, 10, 252, 130, 16 };
             var pps = new byte[] { 0, 0, 0, 1, 104, 206, 60, 128 };
 
             format.SetByteBuffer("csd-0", Java.Nio.ByteBuffer.Wrap(sps));
             format.SetByteBuffer("csd-1", Java.Nio.ByteBuffer.Wrap(pps));
-            format.SetInteger(MediaFormat.KeyMaxInputSize, 720 * 480);
+            format.SetInteger(MediaFormat.KeyMaxInputSize, 720 * 480);//don't need this if you look up the pps/sps?
             Log.Debug(TAG, "format: " + format);
         }
 
@@ -58,6 +61,7 @@ namespace DroidVid
             var buff = new byte[buffSize];
             var ts = new MpegTS.TsPacket(buff);
             var buffEx = new BufferExtractor();
+            buffEx.SampleReady += BuffEx_SampleReady;
             bool eof = false;
 
             var info = new Android.Media.MediaCodec.BufferInfo();
@@ -109,7 +113,7 @@ namespace DroidVid
                     ++count;
                     try
                     {
-                        while (buffEx.outBuffers.Count == 0 && fs.CanRead)
+                        while (buffEx.SampleCount == 0 && fs.CanRead)
                         {
                             if (fs.Length - fs.Position < 188)
                             {
@@ -141,11 +145,11 @@ namespace DroidVid
                         Log.Error("ExtractorActivity error: ", ex.ToString());
                     }
 
-                    if (count < 4)
-                        continue;
+                    //if (count < 4)
+                    //    continue;
 
                     //get the raw video stream, stripped of Mpeg TS headers
-                    var buf = buffEx.outBuffers.Dequeue().GetPayload();
+                    var buf = buffEx.DequeueNextSample();
                     Log.Debug("ExtractorActivity, sampleSize: ", buf.Length.ToString());
 
 
@@ -173,24 +177,23 @@ namespace DroidVid
 
                     if (inIndex >= 0)
                     {
-
                         //get the re-assembled video data from the extractor
-                        var b = Java.Nio.ByteBuffer.Wrap(buf);
+                        using (var b = Java.Nio.ByteBuffer.Wrap(buf.Buffer))
+                        {
 
-                        var inB = inputBuffers[inIndex];
-                        //*************
-                        //THE BUFFER *******MUST********* be CLEARED before each write,
-                        //else when the buffers start getting recycled, the decoder will
-                        //read past the end of the current data into old data!
-                        //This may cause tearing of the picture, or even a complete 
-                        //crash of the app from internal errors in native decoder code!!!!!
-                        inB.Clear();
-                        inB.Put(b);
+                            var inB = inputBuffers[inIndex];
+                            //*************
+                            //THE BUFFER *******MUST********* be CLEARED before each write,
+                            //else when the buffers start getting recycled, the decoder will
+                            //read past the end of the current data into old data!
+                            //This may cause tearing of the picture, or even a complete 
+                            //crash of the app from internal errors in native decoder code!!!!!
+                            inB.Clear();
+                            inB.Put(b);
 
-                        decoder.QueueInputBuffer(inIndex, 0, b.Limit(), 0, MediaCodecBufferFlags.None );
+                            decoder.QueueInputBuffer(inIndex, 0, b.Limit(), 0, MediaCodecBufferFlags.None);
 
-                        b.Dispose();//clean up
-                        
+                        }//  b.Dispose();//clean up
                     }
                     //else
                     //    continue;//we don't have a full video frame, look for more.
@@ -233,9 +236,25 @@ namespace DroidVid
                 } while (fs.CanRead && running);
 
                 Log.Debug("DecodeActivity", MediaCodecBufferFlags.EndOfStream.ToString());
-                decoder.QueueInputBuffer(inIndex, 0, 0, 0, MediaCodecBufferFlags.EndOfStream);
-            }
+                try
+                {
+                    decoder.QueueInputBuffer(inIndex, 0, 0, 0, MediaCodecBufferFlags.EndOfStream);
+                }
+                catch(Exception ex)
+                {
+                    Log.Debug("DecodeActivity", "error closing decoder!");
+                }
+                finally
+                {
+                    decoder.Dispose();
+                }
+
+            }//dispose filestream
         }
 
+        private void BuffEx_SampleReady(object sender, int e)
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

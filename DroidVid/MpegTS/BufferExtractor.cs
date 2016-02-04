@@ -6,14 +6,28 @@ using System.Threading.Tasks;
 
 namespace MpegTS
 {
+
     /// <summary>
     /// This class replaces the MediaExtractor class from the Android.Media library to 
     /// *try* to extract elemental streams from a Mpeg TS.
     /// </summary>
     public class BufferExtractor
     {
+
+
+        private volatile int good, bad;
+
+        /// <summary>
+        /// running count of # good PES samples found
+        /// </summary>
+        public int Good { get { return good; } }
+
+        //
+        public int Bad { get { return bad; } }
+
+
         //this may need to be concurrent queue?
-        public Queue<PacketizedElementaryStream> outBuffers = new Queue<PacketizedElementaryStream>();
+        protected Queue<PacketizedElementaryStream> outBuffers = new Queue<PacketizedElementaryStream>();
 
         public MpegTS.PacketizedElementaryStream pes;
 
@@ -22,6 +36,72 @@ namespace MpegTS
         public BufferExtractor():base()
         {
             //ts = new TsPacket(null);
+        }
+
+        public int SampleCount
+        {
+            get; private set;
+        }
+
+        /// <summary>
+        /// this event is raised when the extractor has found a complete sample <para/>
+        /// <see cref="PacketizedElementaryStream"/>(re-assembled PES).
+        /// </summary>
+        public event EventHandler<int> SampleReady;
+
+        protected void OnSampleReady(int count, long pts)
+        {
+            var del = SampleReady;//get the CB delegate
+
+            if (del != null)
+                try
+                {
+                    del(this, count);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine("error in SampleReady callback: "
+                                                        +ex.StackTrace);
+                }
+        }
+
+        /// <summary>
+        /// Provides a byte buffer of the next sample in the internal FIFO (thread-safe)
+        /// </summary>
+        /// <returns>byte[].Lenth may =0 if called when internal queue is empty</returns>
+        public VideoSample DequeueNextSample()
+        {
+            PacketizedElementaryStream pes = DequeueNextPacket();
+            byte[] buf = new byte[0];//empty array
+            var sample = new VideoSample();
+
+            if (pes != null)
+            {
+                buf = pes.GetPayload();
+
+                if(pes.HasPts)
+                    sample.PresentationTimeStamp = pes.PTS;
+            }
+
+            sample.Buffer = buf;
+
+            return sample ;
+        }
+
+        public PacketizedElementaryStream DequeueNextPacket()
+        {
+            PacketizedElementaryStream pes = null;
+
+            lock (outBuffers)
+            {
+                if (outBuffers.Count > 0)
+                {
+                    pes = outBuffers.Dequeue();
+                    SampleCount = outBuffers.Count;
+                }
+            }
+
+            return pes;
         }
 
         /// <summary>
@@ -54,16 +134,25 @@ namespace MpegTS
                 //PES?
                 if (pes.IsValid )//&& pes.IsComplete)
                 {
-                    outBuffers.Enqueue(pes);
-                    ++Good;
+                    lock(outBuffers)
+                    {
+                        outBuffers.Enqueue(pes);
+                        SampleCount = outBuffers.Count;
+                    }
+
+                    long pts = 0;
+                    if (pes.HasPts)
+                        pts = pes.PTS;
+
+                    OnSampleReady(SampleCount, pts);
+
+                    ++good;
                 }
                 else
-                    ++Bad;
+                    ++bad;
 
                 pes = new MpegTS.PacketizedElementaryStream(ts);//we have the new pes
                 
-                
-                //**TODO: raise an event?       
             }
             else if (pes != null)//we have already found the beginning of the stream and are building a pes
             {
@@ -74,9 +163,6 @@ namespace MpegTS
 
             return true;
         }
-
-        public int Good;
-        public int Bad;
         
 
         public Task AddRawAsync(byte[] data)

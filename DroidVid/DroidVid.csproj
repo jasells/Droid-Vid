@@ -50,13 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BufferPlayer.cs" />
-    <Compile Include="FilePlayer2.cs" />
+    <None Include="FilePlayer2.cs" />
     <Compile Include="FilePlayer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MpegTS\AdaptationField.cs" />
     <Compile Include="MpegTS\BufferExtractor.cs" />
     <Compile Include="MpegTS\PacketizedElementaryStream.cs" />
     <Compile Include="MpegTS\TsPacket.cs" />
+    <Compile Include="MpegTS\VideoSample.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SocketPlayer.cs" />
@@ -64,6 +65,7 @@
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
+    <None Include="README.md" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>

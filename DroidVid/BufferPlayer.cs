@@ -36,7 +36,6 @@ namespace DroidVid
         {
             format = MediaFormat.CreateVideoFormat("video/avc", 720, 480);
 
-            decoder = MediaCodec.CreateDecoderByType("video/avc");
 
             //these are custom/dependant upon the source of the video
             //**TODO: search for and find them @ runtime. (it is not hard to do), but that
@@ -53,6 +52,9 @@ namespace DroidVid
 
         public override async void Run()
         {
+            //so we can restart the player.
+            decoder = MediaCodec.CreateDecoderByType("video/avc");
+
             running = true;
             var finfo = new System.IO.FileInfo(FilePlayer.SAMPLE);
             var fs = finfo.OpenRead();
@@ -97,14 +99,7 @@ namespace DroidVid
 
                 fs.Position = 0;//reset
 
-                Log.Debug(TAG, "looking for start of stream");
 
-                //do
-                //{
-                //    bytes = await fs.ReadAsync(buff, 0, buff.Length);
-
-                //} while (!ts.IsPayloadUnitStart);
-                //buffEx.AddRaw(buff);
 
                 sw.Start();
                 bool started = false;
@@ -145,35 +140,16 @@ namespace DroidVid
                         Log.Error("ExtractorActivity error: ", ex.ToString());
                     }
 
-                    //if (count < 4)
-                    //    continue;
 
                     //get the raw video stream, stripped of Mpeg TS headers
                     var buf = buffEx.DequeueNextSample();
                     Log.Debug("ExtractorActivity, sampleSize: ", buf.Length.ToString());
 
 
-                    ////this is the length of the first sample sent from the mediaExtractor to the decoder in FilePlayer.
-                    ////only valid for a specific file!
-                    //if (!started && buf.Length != 23239)
-                    //{
-                    //    continue;
-                    //}
-                    //else
-                    //    started = true;//try to start where the fileExtractor does.
-
                     //get a input buffer index from the decoder for input
                     inIndex = decoder.DequeueInputBuffer(10000);
 
-                    //if(inIndex >= 0 && buffEx.pes != null)
-                    //{
-                    //    var inB = inputBuffers[inIndex];
-
-                    //    inB.Put(buffEx.pes.GetPayload());
-
-                    //}
-
-                    
+                   
 
                     if (inIndex >= 0)
                     {

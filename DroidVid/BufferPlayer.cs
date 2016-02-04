@@ -110,9 +110,13 @@ namespace DroidVid
                     {
                         while (buffEx.outBuffers.Count == 0 && fs.CanRead)
                         {
+                            if (fs.Length - fs.Position < 188)
+                                return;//we're @ EOF
+
                             //we need a new buffer every loop!
                             buff = new byte[188];
-                            bytes = await fs.ReadAsync(buff, 0, buff.Length);
+                            bytes = await fs.ReadAsync(buff, 0, buff.Length)
+                                            .ConfigureAwait(false);
 
                             //push the raw data to our custom extractor
                             buffEx.AddRaw(buff);

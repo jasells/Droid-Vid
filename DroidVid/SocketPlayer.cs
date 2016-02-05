@@ -135,8 +135,7 @@ namespace DroidVid
                                 {
                                     case PID.PAT:
                                     case PID.PMT:
-                                    case PID.StillImage:
-                                    case PID.KLV:
+
                                         continue;//restart the loop. look for next packet
                                         break;
                                     case PID.H264Video:

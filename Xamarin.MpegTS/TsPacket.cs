@@ -14,16 +14,6 @@ namespace MpegTS
         PAT = 0x00,
         PMT = 0x10,
         H264Video = 0x11,
-
-        /// <summary>
-        /// this PID is actually called "navigation data" but in our case, this means KLV 
-        /// </summary>
-        KLV = 0x21,
-
-        /// <summary>
-        /// AVi specific
-        /// </summary>
-        StillImage = 0x91
     }
 
 

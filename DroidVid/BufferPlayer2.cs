@@ -24,17 +24,6 @@ namespace DroidVid
     {
         private static string TAG = typeof(BufferPlayer2).ToString();
 
-        //these all need to go into a base class.
-        MediaCodec decoder;
-        MediaFormat format;
-        BufferExtractor buffEx;
-        Android.Media.MediaCodec.BufferInfo info;
-        System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
-
-        public volatile bool running;
-        ByteBuffer[] inputBuffers;
-
-
         const int formatStartVal = 518013543;
         const int formatStartI = 64;
 
@@ -70,7 +59,7 @@ namespace DroidVid
             var buff = new byte[buffSize];
             var ts = new MpegTS.TsPacket(buff);
             buffEx = new BufferExtractor();
-            //buffEx.SampleReady += SampleReadyCallbackHandler;
+            buffEx.SampleReady += SampleReadyCallbackHandler;
             //buffEx.Callback = this;
             bool eof = false;
 
@@ -136,6 +125,9 @@ namespace DroidVid
                                 fs.Position -= buff.Length
                                               - buff.ToList().IndexOf(MpegTS.TsPacket.SyncByte);
                             }
+
+                            if (buffEx.SampleCount > 1)
+                                await Task.Delay(10);
                         }
 
                         //if (!fs.CanRead || eof)
@@ -285,7 +277,10 @@ namespace DroidVid
                     break;
                 default:
                     var buffer = outputBuffers[outIndex];// decoder.GetOutputBuffer(outIndex);
-                    Android.Util.Log.Verbose("DecodeActivity", "We can't use this buffer but render it due to the API limit, " + buffer);
+                    Android.Util.Log.Verbose("DecodeActivity", "render the buffer, " + buffer);
+
+                    Android.Util.Log.Verbose("DecodeActivity", "elapsed: "+
+                                                    sw.ElapsedMilliseconds.ToString());
 
                     //bool gcDone = false;
                     // We use a very simple clock to keep the video FPS, or the video
@@ -293,7 +288,13 @@ namespace DroidVid
                     //This causes the next frame to not be rendered too quickly.
                     while (info.PresentationTimeUs / 1000 > sw.ElapsedMilliseconds)
                     {
-                        await Task.Delay(10).ConfigureAwait(false);
+//                        Android.Util.Log.Verbose("DecodeActivity", "PTS: "+ 
+//                                                    (info.PresentationTimeUs / 1000).ToString());
+//
+//                        Android.Util.Log.Verbose("DecodeActivity", "elapsed: "+
+//                                                    sw.ElapsedMilliseconds.ToString());
+
+                        await Task.Delay(5).ConfigureAwait(false);
                     }
                     //the decoder won't advance without this...
                     //must be called before the next decoder.dequeue call

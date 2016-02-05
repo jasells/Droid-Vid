@@ -83,7 +83,7 @@ namespace DroidVid
 
                 //mPlayer = new FilePlayer(holder.Surface);//this works
                 //mPlayer = new BufferPlayer2(holder.Surface);//this works, but choppy
-                mPlayer = new BufferPlayer(holder.Surface);//this works too
+                mPlayer = new BufferPlayer(holder.Surface);//this works great
 
                 mPlayer.RunAsync();
             }

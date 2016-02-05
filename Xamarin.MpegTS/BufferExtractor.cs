@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Debug = System.Diagnostics.Debug;
 
 namespace MpegTS
 {
@@ -57,15 +58,28 @@ namespace MpegTS
         /// </summary>
         public event SampleReadyCallback SampleReady;
 
-        protected void OnSampleReady(int count, long pts)
+        private Task lastSampleRendered;
+
+        protected async void OnSampleReady(int count, long pts)
         {
             var del = SampleReady;//get the CB delegate
 
             if (del != null)
                 try
                 {
-                    if(count > 0)
-                        del( count);    
+                    if (lastSampleRendered != null)
+                        await lastSampleRendered.ConfigureAwait(false) ;
+
+                    if (count > 0)
+                    {
+                        //var opt = TaskCreationOptions.PreferFairness;
+
+                        //lastSampleRendered = new Task(() => del(count), opt);
+
+                        //lastSampleRendered.Start();
+
+                        del(count);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -80,7 +94,18 @@ namespace MpegTS
         /// <returns>byte[].Lenth may =0 if called when internal queue is empty</returns>
         public VideoSample DequeueNextSample()
         {
+            //int c;
+            //lock(outBuffers)
+            //{
+            //    c = outBuffers.Count;
+            //}
+            //Task.Run(() => Debug.WriteLine("buffers ready count: " + c));
+
+
             PacketizedElementaryStream pes = DequeueNextPacket();
+
+
+
             byte[] buf = new byte[0];//empty array
             var sample = new VideoSample();
 

@@ -24,17 +24,6 @@ namespace DroidVid
     {
         private static string TAG = typeof(BufferPlayer).ToString();
 
-        //these all need to go into a base class.
-        MediaCodec decoder;
-        MediaFormat format;
-        BufferExtractor buffEx;
-        Android.Media.MediaCodec.BufferInfo info;
-        System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
-
-        public volatile bool running;
-        ByteBuffer[] inputBuffers;
-
-
         const int formatStartVal = 518013543;
         const int formatStartI = 64;
 
@@ -284,7 +273,7 @@ namespace DroidVid
                     break;
                 default:
                     var buffer = outputBuffers[outIndex];// decoder.GetOutputBuffer(outIndex);
-                    Android.Util.Log.Verbose("DecodeActivity", "We can't use this buffer but render it due to the API limit, " + buffer);
+                    Android.Util.Log.Verbose("DecodeActivity", "rendering buffer, " + buffer);
 
                     //bool gcDone = false;
                     // We use a very simple clock to keep the video FPS, or the video
@@ -295,7 +284,7 @@ namespace DroidVid
                         await Task.Delay(10).ConfigureAwait(false);
                     }
                     //the decoder won't advance without this...
-                    //must be called before the next decoder.dequeue call
+                    //must be called before the next decoder.dequeue call to cause the decoder to draw to the screen
                     decoder.ReleaseOutputBuffer(outIndex, true);
                     break;
             }

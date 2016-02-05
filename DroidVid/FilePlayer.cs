@@ -13,11 +13,22 @@ using Android.Widget;
 using System.Threading.Tasks;
 using Android.Media;
 using Android.Util;
+using MpegTS;
 
 namespace DroidVid
 {
     public abstract class Player
     {
+        //these all need to go into a base class.
+        protected MediaCodec decoder;
+        protected MediaFormat format;
+        protected BufferExtractor buffEx;
+        protected Android.Media.MediaCodec.BufferInfo info;
+        protected System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+
+        public volatile bool running;
+        protected Java.Nio.ByteBuffer[] inputBuffers;
+
         public Task DecodeThread { get; private set; }
         public volatile bool interrupted = false;
 
@@ -32,6 +43,10 @@ namespace DroidVid
         /// <returns></returns>
         public Task RunAsync()
         {
+            //var DecodeThread = new Task(() => Run(), TaskCreationOptions.LongRunning);
+            //DecodeThread.Start();
+            //return DecodeThread;
+
             return (DecodeThread = Task.Run(() => Run()));
         }
 
@@ -116,7 +131,7 @@ namespace DroidVid
         {
             //Android.Media.MediaExtractor extractor;
 
-            Android.Media.MediaCodec decoder = null;
+            //Android.Media.MediaCodec decoder = null;
 
             using (var extractor = new Android.Media.MediaExtractor())
             //using (Android.Media.MediaCodec decoder = null)

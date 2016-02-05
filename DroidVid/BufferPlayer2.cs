@@ -20,7 +20,7 @@ namespace DroidVid
     //a ref I've been using:
     //http://stackoverflow.com/questions/19742047/how-to-use-mediacodec-without-mediaextractor-for-h264
     //http://stackoverflow.com/questions/26637831/displaying-h264-video-from-an-mpegts-stream-over-upd-on-android?lq=1
-    public class BufferPlayer2:Player, ISampleReadyCallback
+    public class BufferPlayer2:Player//, ISampleReadyCallback
     {
         private static string TAG = typeof(BufferPlayer2).ToString();
 
@@ -71,7 +71,7 @@ namespace DroidVid
             var ts = new MpegTS.TsPacket(buff);
             buffEx = new BufferExtractor();
             //buffEx.SampleReady += SampleReadyCallbackHandler;
-            buffEx.Callback = this;
+            //buffEx.Callback = this;
             bool eof = false;
 
             info = new Android.Media.MediaCodec.BufferInfo();

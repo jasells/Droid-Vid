@@ -43,10 +43,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="VlcXamarin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xam.Plugins.Android.VlcXamarin.3.0.0\lib\MonoAndroid\VlcXamarin.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BufferPlayer.cs" />
@@ -54,18 +50,12 @@
     <None Include="FilePlayer2.cs" />
     <Compile Include="FilePlayer.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="MpegTS\AdaptationField.cs" />
-    <Compile Include="MpegTS\BufferExtractor.cs" />
-    <Compile Include="MpegTS\PacketizedElementaryStream.cs" />
-    <Compile Include="MpegTS\TsPacket.cs" />
-    <Compile Include="MpegTS\VideoSample.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SocketPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
-    <None Include="packages.config" />
     <None Include="README.md" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
@@ -86,7 +76,12 @@
     <Content Include="csdInfo.txt" />
     <Content Include="debugOut.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin.MpegTS\Xamarin.MpegTS.csproj">
+      <Project>{7898ba26-2fc3-46d6-beb5-503323fc2aa6}</Project>
+      <Name>Xamarin.MpegTS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

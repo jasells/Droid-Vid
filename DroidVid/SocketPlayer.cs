@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 using Android.Media;
 using Android.Util;
 using MpegTS;
-//using Debug = Android.Util.Log;
 
 
 namespace DroidVid
@@ -36,8 +35,15 @@ namespace DroidVid
         const int formatStartVal = 518013543;
         const int formatStartI = 64;
 
-        public SocketPlayer(Surface surf):base(surf)
+        private string myAddress;
+        private int myPort;
+
+        public SocketPlayer(Surface surf, int port)
+            :base(surf)
         {
+            //myAddress = address;
+            myPort = port;
+
             format = MediaFormat.CreateVideoFormat("video/avc", 720, 480);
 
 
@@ -53,57 +59,50 @@ namespace DroidVid
             Log.Debug(TAG, "format: " + format);
         }
 
-        override public async void Run()
+        override protected async void Run()
         {
+            //var sock = new Sockets.Plugin.UdpSocketReceiver();
+            var sock = new System.Net.Sockets.UdpClient(
+                            new System.Net.IPEndPoint(System.Net.IPAddress.Any, myPort));
+            sock.EnableBroadcast = true;
+
+            using (sock.Client)//make sure the socket gets cleaned up on exit
             using (decoder)
             {
                 //config the decoder with the info/meta data from the stream
                 decoder.Configure(format, surface, null, MediaCodecConfigFlags.None);
                 decoder.Start();
 
-                var inputBuffers = decoder.GetInputBuffers();
-                var outputBuffers = decoder.GetOutputBuffers();
-                var info = new Android.Media.MediaCodec.BufferInfo();
                 bool isEOS = false;
                 bool foundNAL = false;
                 int count = 0;
-                var sw = new System.Diagnostics.Stopwatch();
-                
-                //sw.Start();
 
-                int bufLen = buff.Length;
-                while (!interrupted)
+                while (running)
                 {
-                    //sw.Restart();
-
                     ++count;
                     try
                     {
-                        while (fs.CanRead && buffEx.SampleCount == 0)
+                        while (buffEx.SampleCount == 0 && running)
                         {
-                            if (fs.Length - fs.Position < 188)
-                            {
-                                isEOS = true;
-                                break;//we're @ EOF
-                            }
-
                             //we need a new buffer every loop!
-                            buff = new byte[188];
-                            bytes = await fs.ReadAsync(buff, 0, buff.Length)
-                                            .ConfigureAwait(false);
+                            //buff = new byte[188];
+                            var pack = await sock.ReceiveAsync().ConfigureAwait(false);
+
+                            //we may need to check the source here too? or specify above.
+                            if (pack.Buffer.Length != TsPacket.PacketLength )
+                                continue;//wait for next packet, not a TS packet
+
+                            //could check # of non-TS packets and abort if too many?
 
                             //push the raw data to our custom extractor
-                            if (!buffEx.AddRaw(buff))
+                            if (!buffEx.AddRaw(pack.Buffer))
                             {
                                 Log.Debug("ExtractorActivity,   ", " ----------bad TS packet!");
 
-                                //find next sync byte and try again
-                                fs.Position -= buff.Length
-                                              - buff.ToList().IndexOf(MpegTS.TsPacket.SyncByte);
                             }
                         }
 
-                        if (!fs.CanRead || isEOS)
+                        if (!running)
                             break;//exit the render loop
                     }
                     catch (Exception ex)
@@ -111,31 +110,35 @@ namespace DroidVid
                         Log.Error("ExtractorActivity error: ", ex.ToString());
                     }
 
+                    var sample = buffEx.DequeueNextSample();
+                    Log.Debug("ExtractorActivity, sampleSize: ", sample.Length.ToString());
 
-                    if (sampleSize < 0)
-                            {
-                                // We shouldn't stop the playback at this point, just pass the EOS
-                                // flag to decoder, we will get it again from the
-                                // dequeueOutputBuffer
+                    //get a input buffer index from the decoder for input
+                    int inIndex = decoder.DequeueInputBuffer(10000);
 
-                                Log.Debug("DecodeActivity", MediaCodecBufferFlags.EndOfStream.ToString());
-                                decoder.QueueInputBuffer(inIndex, 0, 0, 0, MediaCodecBufferFlags.EndOfStream);
-                                isEOS = true;
-                            }
-                            else if(pid == PID.H264Video)
-                            {
-                                Log.Debug("SocketPlayer queueing data", "PID: " + string.Format("{0}", pid));
 
-                                inBuff.Clear();//reset buff position?
-                                inBuff.Put(buff, 0, sampleSize);
-                                inBuff.Clear();
+                    if (inIndex >= 0)
+                    {
+                        //get the re-assembled video data from the extractor
+                        using (var b = Java.Nio.ByteBuffer.Wrap(sample.Buffer))
+                        {
 
-                                int sampleTime = 0;//no sample time provided here... maybe available, in meta data?
-                                decoder.QueueInputBuffer(inIndex, 0, sampleSize, sampleTime, 0);
-                                //await extractor.AdvanceAsync().ConfigureAwait(false);
-                            }
-                        }
+                            var inB = inputBuffers[inIndex];
+                            //*************
+                            //THE BUFFER *******MUST********* be CLEARED before each write,
+                            //else when the buffers start getting recycled, the decoder will
+                            //read past the end of the current data into old data!
+                            //This may cause tearing of the picture, or even a complete 
+                            //crash of the app from internal errors in native decoder code!!!!!
+                            inB.Clear();
+                            inB.Put(b);//put data into the decoder's native buffer
+
+                            //tell the decoder about the new data in the buffer
+                            decoder.QueueInputBuffer(inIndex, 0, b.Limit(), 0, MediaCodecBufferFlags.None);
+
+                        }//  b.Dispose();//clean up
                     }
+
 
                     int outIndex = decoder.DequeueOutputBuffer(info, 10000);
                     switch ((Android.Media.MediaCodecInfoState)outIndex)
@@ -157,6 +160,7 @@ namespace DroidVid
                             var buffer = outputBuffers[outIndex];
                             Android.Util.Log.Verbose("DecodeActivity", "We can't use this buffer but render it due to the API limit, " + buffer);
 
+                    //no clock needed for live streaming?
                             //// We use a very simple clock to keep the video FPS, or the video
                             //// playback will be too fast
                             //while (info.PresentationTimeUs / 1000 > sw.ElapsedMilliseconds)
@@ -185,10 +189,10 @@ namespace DroidVid
                         break;
                     }
                 }
-
-                decoder.Stop();
-                //}
             }
+
+            info = null;
+            decoder = null;
         }
     }
 }

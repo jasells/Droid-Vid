@@ -27,10 +27,9 @@ namespace DroidVid
         protected System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
         public volatile bool running;
-        protected Java.Nio.ByteBuffer[] inputBuffers;
+        protected Java.Nio.ByteBuffer[] inputBuffers, outputBuffers;
 
         public Task DecodeThread { get; private set; }
-        public volatile bool interrupted = false;
 
         protected Surface surface;
         //protected Context myContext;
@@ -56,6 +55,15 @@ namespace DroidVid
         }
 
         protected abstract void Run();
+
+        protected void InitializeDecoder()
+        {
+            decoder.Configure(format, surface, null, MediaCodecConfigFlags.None);
+            decoder.Start();
+
+            inputBuffers = decoder.GetInputBuffers();
+            outputBuffers = decoder.GetOutputBuffers();
+        }
 
         protected static void PrintFormatInfo(MediaFormat format)
         {
@@ -197,19 +205,15 @@ namespace DroidVid
 
                 using (decoder)
                 {
-                    decoder.Start();
+                    InitializeDecoder();
 
-                    var inputBuffers = decoder.GetInputBuffers();
-                    var outputBuffers = decoder.GetOutputBuffers();
-                    var info = new Android.Media.MediaCodec.BufferInfo();
                     bool isEOS = false;
                     var sw = new System.Diagnostics.Stopwatch();
-                    long startMs = sw.ElapsedMilliseconds;
                     sw.Start();
                     byte[] peekBuf = new byte[188];
 
 
-                    while (!interrupted)
+                    while (running)
                     {
                         //sw.Restart();
 
@@ -286,7 +290,7 @@ namespace DroidVid
                                 // We use a very simple clock to keep the video FPS, or the video
                                 // playback will be too fast
                                 //This causes the next frame to not be rendered too quickly.
-                                while (info.PresentationTimeUs / 1000 > sw.ElapsedMilliseconds - startMs)
+                                while (info.PresentationTimeUs / 1000 > sw.ElapsedMilliseconds )
                                 {
                                     try
                                     {

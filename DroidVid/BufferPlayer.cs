@@ -84,11 +84,7 @@ namespace DroidVid
 
 
 
-                decoder.Configure(format, surface, null, MediaCodecConfigFlags.None);
-                decoder.Start();
-
-                inputBuffers = decoder.GetInputBuffers();
-
+                InitializeDecoder();
 
                 fs.Position = 0;//reset
 
@@ -99,7 +95,7 @@ namespace DroidVid
                     ++count;
                     try
                     {
-                        while ( fs.CanRead && buffEx.SampleCount == 0)
+                        while (fs.CanRead && buffEx.SampleCount == 0)
                         {
                             if (fs.Length - fs.Position < 188)
                             {
@@ -115,7 +111,7 @@ namespace DroidVid
                             //push the raw data to our custom extractor
                             if (!buffEx.AddRaw(buff))
                             {
-                                Log.Debug("ExtractorActivity,   "," ----------bad TS packet!");
+                                Log.Debug("ExtractorActivity,   ", " ----------bad TS packet!");
 
                                 //find next sync byte and try again
                                 fs.Position -= buff.Length
@@ -132,10 +128,10 @@ namespace DroidVid
                     }
 
                     //get the raw video stream, stripped of Mpeg TS headers
-                    var buf = buffEx.DequeueNextSample();
-                    Log.Debug("ExtractorActivity, sampleSize: ", buf.Length.ToString());
+                    var sample = buffEx.DequeueNextSample();
+                    Log.Debug("ExtractorActivity, sampleSize: ", sample.Length.ToString());
 
-                    var outputBuffers = decoder.GetOutputBuffers();
+                    //var outputBuffers = decoder.GetOutputBuffers();
 
                     //get a input buffer index from the decoder for input
                     inIndex = decoder.DequeueInputBuffer(10000);
@@ -144,7 +140,7 @@ namespace DroidVid
                     if (inIndex >= 0)
                     {
                         //get the re-assembled video data from the extractor
-                        using (var b = Java.Nio.ByteBuffer.Wrap(buf.Buffer))
+                        using (var b = Java.Nio.ByteBuffer.Wrap(sample.Buffer))
                         {
 
                             var inB = inputBuffers[inIndex];
@@ -155,8 +151,9 @@ namespace DroidVid
                             //This may cause tearing of the picture, or even a complete 
                             //crash of the app from internal errors in native decoder code!!!!!
                             inB.Clear();
-                            inB.Put(b);
+                            inB.Put(b);//put data into the decoder's native buffer
 
+                            //tell the decoder about the new data in the buffer
                             decoder.QueueInputBuffer(inIndex, 0, b.Limit(), 0, MediaCodecBufferFlags.None);
 
                         }//  b.Dispose();//clean up
@@ -199,14 +196,14 @@ namespace DroidVid
                             break;
                     }
 
-                }while (fs.CanRead && running);
+                } while (fs.CanRead && running);
 
                 Log.Debug("DecodeActivity", MediaCodecBufferFlags.EndOfStream.ToString());
                 try
                 {
                     decoder.QueueInputBuffer(inIndex, 0, 0, 0, MediaCodecBufferFlags.EndOfStream);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Log.Debug("DecodeActivity", "error closing decoder!");
                 }

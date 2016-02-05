@@ -114,7 +114,7 @@ namespace MpegTS
         }
 
         /// <summary>
-        /// to push new raw data from anysource, pass the data in here
+        /// to push new raw data from any source, pass the data in here
         /// </summary>
         /// <param name="data"></param>
         public bool AddRaw(byte[] data)
@@ -129,7 +129,10 @@ namespace MpegTS
             }
 
             if (ts.PID != PID.H264Video)
+            {
+                CheckCustomPIDs(ts);
                 return true;//not video, so ignore it for now, it is a valid packet.
+            }
 
             if (pes == null && ts.IsPayloadUnitStart)
                 pes = new MpegTS.PacketizedElementaryStream(ts);
@@ -172,7 +175,15 @@ namespace MpegTS
 
             return true;
         }
-        
+
+        private void CheckCustomPIDs(TsPacket p)
+        {
+            //**TODO: provide a way for users to provide custom/private PIDs
+            //so that the extractor can notify (event or callback) when it sees
+            //one.
+
+            //throw new NotImplementedException();
+        }
 
         public Task AddRawAsync(byte[] data)
         {

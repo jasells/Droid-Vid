@@ -14,6 +14,13 @@ namespace MpegTS
         PAT = 0x00,
         PMT = 0x10,
         H264Video = 0x11,
+
+        /// <summary>
+        /// proprietary navigation, or other, data provided by the source
+        /// </summary>
+        NavData = 0x21,
+
+
     }
 
 

@@ -47,10 +47,15 @@ namespace DroidVid
             //DecodeThread.Start();
             //return DecodeThread;
 
+            //so we can restart the player.
+            decoder = MediaCodec.CreateDecoderByType("video/avc");
+
+            info = new Android.Media.MediaCodec.BufferInfo();
+
             return (DecodeThread = Task.Run(() => Run()));
         }
 
-        public abstract void Run();
+        protected abstract void Run();
 
         protected static void PrintFormatInfo(MediaFormat format)
         {
@@ -127,7 +132,7 @@ namespace DroidVid
         }
 
         
-        override public async void Run()
+        override protected async void Run()
         {
             //Android.Media.MediaExtractor extractor;
 

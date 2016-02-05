@@ -31,65 +31,34 @@ namespace DroidVid
     //http://stackoverflow.com/questions/19742047/how-to-use-mediacodec-without-mediaextractor-for-h264
     public class SocketPlayer:Player
     {
+        private static string TAG = typeof(SocketPlayer).ToString();
 
-        public static string dir = "/Removable/MicroSD/";//"/mnt/shared/extSdCard/";//
-        public static string SAMPLE = dir + "Video_2014_5_6__16_51_56.mp4";//dir+"Video_2014_5_6__16_51_56.mp4";//
         const int formatStartVal = 518013543;
         const int formatStartI = 64;
 
         public SocketPlayer(Surface surf):base(surf)
         {
-            
+            format = MediaFormat.CreateVideoFormat("video/avc", 720, 480);
+
+
+            //these are custom/dependant upon the source of the video
+            //**TODO: search for and find them @ runtime. (it is not hard to do), but that
+            //can cause a slight delay in initial video rendering.
+            var sps = new byte[] { 0, 0, 0, 1, 103, 66, 224, 30, 218, 2, 208, 246, 192, 68, 0, 0, 46, 236, 0, 10, 252, 130, 16 };
+            var pps = new byte[] { 0, 0, 0, 1, 104, 206, 60, 128 };
+
+            format.SetByteBuffer("csd-0", Java.Nio.ByteBuffer.Wrap(sps));
+            format.SetByteBuffer("csd-1", Java.Nio.ByteBuffer.Wrap(pps));
+            format.SetInteger(MediaFormat.KeyMaxInputSize, 720 * 480);//don't need this if you look up the pps/sps?
+            Log.Debug(TAG, "format: " + format);
         }
 
         override public async void Run()
         {
-            Android.Media.MediaCodec decoder = null;
-
-            var finfo = new System.IO.FileInfo(FilePlayer.SAMPLE);
-            var fs = finfo.OpenRead();
-            int buffSize = 188;
-            var buff = new byte[buffSize];
-            PID pid;
-
-            var mf = new MediaFormat();
-            mf.SetString(MediaFormat.KeyMime, "video/avc");
-            mf.SetInteger(MediaFormat.KeyMaxInputSize, 1024 * 100);
-            mf.SetInteger(MediaFormat.KeyWidth, 720);
-            mf.SetInteger(MediaFormat.KeyHeight, 480);
-            mf.SetInteger("push-blank-buffers-on-shudown", 1);
-
-            do
-            {
-                int bytes = await fs.ReadAsync(buff, 0, buff.Length).ConfigureAwait(false);
-                pid = (PID)buff[2];
-
-                Log.Debug("SocketPlayer", "PID: " + string.Format("{0}", pid));
-
-            } while (BitConverter.ToInt32(buff, formatStartI) != formatStartVal);
-
-            var tmpB = new byte[23+8];
-            Buffer.BlockCopy(buff, formatStartI - 4, tmpB, 0, tmpB.Length);
-
-            mf.SetByteBuffer("csd-0", Java.Nio.ByteBuffer.Wrap(tmpB));
-
-            decoder = MediaCodec.CreateDecoderByType(mf.GetString(MediaFormat.KeyMime));
-
-            if (decoder == null)
-            {
-                Android.Util.Log.Error("DecodeActivity", "Can't find video info!");
-
-                fs.Dispose();
-                return;//can't continue...
-            }
-
-            var bQ = new Queue<byte[]>(270);
-
-            using (fs)//make sure things get cleaned up
             using (decoder)
             {
                 //config the decoder with the info/meta data from the stream
-                decoder.Configure(mf, surface, null, 0);
+                decoder.Configure(format, surface, null, MediaCodecConfigFlags.None);
                 decoder.Start();
 
                 var inputBuffers = decoder.GetInputBuffers();
@@ -97,68 +66,53 @@ namespace DroidVid
                 var info = new Android.Media.MediaCodec.BufferInfo();
                 bool isEOS = false;
                 bool foundNAL = false;
+                int count = 0;
                 var sw = new System.Diagnostics.Stopwatch();
-                //long startMs = sw.ElapsedMilliseconds;//this is un-used
-                sw.Start();
+                
+                //sw.Start();
 
                 int bufLen = buff.Length;
                 while (!interrupted)
                 {
                     //sw.Restart();
 
-                    if (!isEOS)
+                    ++count;
+                    try
                     {
-                        int inIndex = decoder.DequeueInputBuffer(10000);
-                        if (inIndex >= 0)
+                        while (fs.CanRead && buffEx.SampleCount == 0)
                         {
-                            var inBuff = inputBuffers[inIndex];
-                            int sampleSize = 0;
-                            int tmpSamp = 0;
-
-                            do
+                            if (fs.Length - fs.Position < 188)
                             {
-                                buff = new byte[buffSize];
-                                tmpSamp = await fs.ReadAsync(buff, 0, bufLen).ConfigureAwait(false);
-                                if (tmpSamp == 0)
-                                {
-                                    sampleSize = -1;//set EOS
-                                    isEOS = true;
-                                    break;//end loop
-                                }
+                                isEOS = true;
+                                break;//we're @ EOF
+                            }
 
-                                pid = (PID)buff[2];
+                            //we need a new buffer every loop!
+                            buff = new byte[188];
+                            bytes = await fs.ReadAsync(buff, 0, buff.Length)
+                                            .ConfigureAwait(false);
 
-                                //if (pid != PID.PAT && pid != PID.VideoStr)
-                                //    await fs.ReadAsync(buff, 0, bufLen).ConfigureAwait(false); ;
+                            //push the raw data to our custom extractor
+                            if (!buffEx.AddRaw(buff))
+                            {
+                                Log.Debug("ExtractorActivity,   ", " ----------bad TS packet!");
 
-                                switch (pid)
-                                {
-                                    case PID.PAT:
-                                    case PID.PMT:
+                                //find next sync byte and try again
+                                fs.Position -= buff.Length
+                                              - buff.ToList().IndexOf(MpegTS.TsPacket.SyncByte);
+                            }
+                        }
 
-                                        continue;//restart the loop. look for next packet
-                                        break;
-                                    case PID.H264Video:
-                                        //should try this jsut skipping non-video frames! duh
-                                        foundNAL = (BitConverter.ToInt32(buff, formatStartI) == formatStartVal);
-
-                                        if (!foundNAL)
-                                            sampleSize += tmpSamp;
-                                        else//we found the start of a new NAL in video stream
-                                        {
-
-                                        }
-
-                                        //add the current packet, even if it is the start of
-                                        //next video segment.
-                                        bQ.Enqueue(buff);
-                                        break;
-                                }
-
-                            } while (tmpSamp > 0 && !foundNAL);
+                        if (!fs.CanRead || isEOS)
+                            break;//exit the render loop
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error("ExtractorActivity error: ", ex.ToString());
+                    }
 
 
-                            if (sampleSize < 0)
+                    if (sampleSize < 0)
                             {
                                 // We shouldn't stop the playback at this point, just pass the EOS
                                 // flag to decoder, we will get it again from the
@@ -203,22 +157,22 @@ namespace DroidVid
                             var buffer = outputBuffers[outIndex];
                             Android.Util.Log.Verbose("DecodeActivity", "We can't use this buffer but render it due to the API limit, " + buffer);
 
-                            // We use a very simple clock to keep the video FPS, or the video
-                            // playback will be too fast
-                            while (info.PresentationTimeUs / 1000 > sw.ElapsedMilliseconds)
-                            {
-                                try
-                                {
-                                    await Task.Delay(10).ConfigureAwait(false);
-                                    //sleep(10);
-                                }
-                                catch (Exception e)
-                                {
-                                    //e.printStackTrace();
-                                    System.Diagnostics.Debug.WriteLine(e.StackTrace);
-                                    break;
-                                }
-                            }
+                            //// We use a very simple clock to keep the video FPS, or the video
+                            //// playback will be too fast
+                            //while (info.PresentationTimeUs / 1000 > sw.ElapsedMilliseconds)
+                            //{
+                            //    try
+                            //    {
+                            //        await Task.Delay(10).ConfigureAwait(false);
+                            //        //sleep(10);
+                            //    }
+                            //    catch (Exception e)
+                            //    {
+                            //        //e.printStackTrace();
+                            //        System.Diagnostics.Debug.WriteLine(e.StackTrace);
+                            //        break;
+                            //    }
+                            //}
                             decoder.ReleaseOutputBuffer(outIndex, true);
                             break;
                     }

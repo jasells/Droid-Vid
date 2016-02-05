@@ -46,7 +46,7 @@ namespace DroidVid
         }
 
 
-        public override async void Run()
+        protected override async void Run()
         {
             //so we can restart the player.
             decoder = MediaCodec.CreateDecoderByType("video/avc");

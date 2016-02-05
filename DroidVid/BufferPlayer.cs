@@ -46,10 +46,8 @@ namespace DroidVid
         }
 
 
-        public override async void Run()
+        protected override async void Run()
         {
-            //so we can restart the player.
-            decoder = MediaCodec.CreateDecoderByType("video/avc");
 
             running = true;
             var finfo = new System.IO.FileInfo(FilePlayer.SAMPLE);
@@ -62,7 +60,6 @@ namespace DroidVid
             //buffEx.SampleReady += BuffEx_SampleReady;
             bool eof = false;
 
-            info = new Android.Media.MediaCodec.BufferInfo();
 
             using(info)
             using(decoder)
@@ -186,7 +183,7 @@ namespace DroidVid
                             break;
                         default:
                             var buffer = outputBuffers[outIndex];// decoder.GetOutputBuffer(outIndex);
-                            Android.Util.Log.Verbose("DecodeActivity", "We can't use this buffer but render it due to the API limit, " + buffer);
+                            Android.Util.Log.Verbose("DecodeActivity", "render the buffer, " + buffer);
 
                             //bool gcDone = false;
                             // We use a very simple clock to keep the video FPS, or the video
@@ -214,6 +211,9 @@ namespace DroidVid
                     Log.Debug("DecodeActivity", "error closing decoder!");
                 }
             }//dispose filestream,decoder, info
+
+            info = null;
+            decoder = null;
         }
 
 

@@ -162,7 +162,7 @@ namespace MpegTS
             if (pes == null && ts.IsPayloadUnitStart)
                 pes = new MpegTS.PacketizedElementaryStream(ts);
 
-            else if (ts.IsPayloadUnitStart)
+            if (ts.IsPayloadUnitStart)
             {
                 //var lastPes = pes;//hang onto the now complete pes.
 

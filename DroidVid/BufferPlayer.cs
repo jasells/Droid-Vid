@@ -50,7 +50,7 @@ namespace DroidVid
         {
 
             running = true;
-            var finfo = new System.IO.FileInfo(FilePlayer.SAMPLE);
+            var finfo = new System.IO.FileInfo(FilePlayer.dir + "decode.out");
             var fs = finfo.OpenRead();
             int bytes, count, inIndex =0;
             int buffSize = 188;
@@ -104,7 +104,7 @@ namespace DroidVid
                             }
 
                             //we need a new buffer every loop!
-                            buff = new byte[188];
+                            buff = new byte[752];
                             bytes = await fs.ReadAsync(buff, 0, buff.Length)
                                             .ConfigureAwait(false);
 

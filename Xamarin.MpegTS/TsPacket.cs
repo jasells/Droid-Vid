@@ -42,7 +42,8 @@ namespace MpegTS
     /// </summary>
     public class TsPacket
     {
-        internal protected byte[] data;
+        //internal protected byte[] data;
+        internal protected TsChunk data;
 
         /// <summary>
         /// the start/sync byte for MpegTS packets.
@@ -125,9 +126,14 @@ namespace MpegTS
         { get { return new AdaptationField(this); } }
 
 
+        internal TsPacket(TsChunk segment)
+        {
+            data = segment;
+        }
+
         public TsPacket(byte[] rawData)
         {
-            data = rawData;
+            data = new TsChunk( rawData);
         }
         
         /// <summary>
@@ -136,14 +142,14 @@ namespace MpegTS
         /// <param name="rawData"></param>
         public void Reinit(byte[] rawData)
         {
-            data = rawData; 
+            data = new TsChunk(rawData); 
         }
 
 
         /// <summary>
         /// read only payload for this Ts packet
         /// </summary>   
-        public System.IO.MemoryStream GetPayload(bool trimTrailingZeros = false)
+        public TsChunk GetPayload(bool trimTrailingZeros = false)
         {
             int start = PayloadStart;
 
@@ -171,7 +177,7 @@ namespace MpegTS
                 }
             }
 
-            return new System.IO.MemoryStream(data, start, payloadLen, false);
+            return data.GetSubStream( start, payloadLen, false);
         }
 
         /// <summary>

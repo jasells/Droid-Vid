@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -35,6 +35,7 @@
     <Compile Include="BufferExtractor.cs" />
     <Compile Include="PacketizedElementaryStream.cs" />
     <Compile Include="StreamExtractor.cs" />
+    <Compile Include="TsChunk.cs" />
     <Compile Include="TsPacket.cs" />
     <Compile Include="VideoSample.cs" />
   </ItemGroup>

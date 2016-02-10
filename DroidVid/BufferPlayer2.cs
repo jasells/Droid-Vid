@@ -87,13 +87,13 @@ namespace DroidVid
                 //System.Buffer.BlockCopy(buff, formatStartI - 4, tmpB, 0, tmpB.Length);
 
 
-
-                decoder.Configure(format, surface, null, MediaCodecConfigFlags.None);
-                decoder.Start();
-
-                inputBuffers = decoder.GetInputBuffers();
-
-
+                InitializeDecoder();
+//                decoder.Configure(format, surface, null, MediaCodecConfigFlags.None);
+//                decoder.Start();
+//
+//                inputBuffers = decoder.GetInputBuffers();
+//
+//
                 fs.Position = 0;//reset
 
                 sw.Restart();

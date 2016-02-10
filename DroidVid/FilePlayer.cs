@@ -51,6 +51,8 @@ namespace DroidVid
 
             info = new Android.Media.MediaCodec.BufferInfo();
 
+            running = true;
+
             return (DecodeThread = Task.Run(() => Run()));
         }
 
@@ -172,7 +174,7 @@ namespace DroidVid
 
                 for (int i = 0; i < extractor.TrackCount; i++)
                 {
-                    var format = extractor.GetTrackFormat(i);
+                    format = extractor.GetTrackFormat(i);
 
                     Log.Debug("Format info: ", format.ToString());
 
@@ -190,9 +192,12 @@ namespace DroidVid
                         PrintFormatInfo(format);
 
                         extractor.SelectTrack(i);
-                        decoder = Android.Media.MediaCodec.CreateDecoderByType(mime);
-                        //this is where the Xamarin Android VM dies.
-                        decoder.Configure(format, surface, null, 0);
+
+                        InitializeDecoder();
+
+                        //decoder = Android.Media.MediaCodec.CreateDecoderByType(mime);
+                        ////this is where the Xamarin Android VM dies.
+                        //decoder.Configure(format, surface, null, 0);
                         break;
                     }
                 }
@@ -205,7 +210,6 @@ namespace DroidVid
 
                 using (decoder)
                 {
-                    InitializeDecoder();
 
                     bool isEOS = false;
                     var sw = new System.Diagnostics.Stopwatch();

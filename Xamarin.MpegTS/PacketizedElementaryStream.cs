@@ -29,18 +29,23 @@ namespace MpegTS
         //    return val;
         //}
 
-        private Queue<TsPacket> packets;
+        public Queue<TsPacket> packets;
 
-        private int ExtensionLen
+        private ushort ExtensionLen
         {
             get
             {
-                return
-                    BitConverter.ToUInt16(Header, packets.Peek().PayloadStart + 4);
+                int start = packets.Peek().PayloadStart + 4;
+                return (ushort)(Header[start] << 8 | Header[start+1]);
+
+                //var b = new byte[2];
+                //Header.Read()
+                //return
+                //    BitConverter.ToUInt16(Header, packets.Peek().PayloadStart + 4);
             }
         }
 
-        private byte[] Header
+        private TsChunk Header
         {
             get { return packets.Peek().data; }
         }
@@ -59,10 +64,20 @@ namespace MpegTS
             get
             {
                 int start = packets.Peek().PayloadStart;
-                if (start < 4 || start+4 > Header.Length)
+                if (start < 4 || start + 4 > Header.Length)
                     return false;
                 else
-                    return BitConverter.ToUInt32(Header, packets.Peek().PayloadStart) == VideoStartCode;
+                {
+                    long p = Header.Position;
+                    Header.Position = packets.Peek().PayloadStart;
+
+                    byte[] h = new byte[4];
+                    Header.Read(h, 0, h.Length);
+
+                    Header.Position = p;//reset cursor
+
+                    return BitConverter.ToUInt32(h, 0) == VideoStartCode;
+                }
             }
         }
 
@@ -154,6 +169,7 @@ namespace MpegTS
 
         public byte[] GetPayload()
         {
+            //These refs are not currently used, though they are interesting:
             //need to pull out NAL's now to pass to the decoder
             //http://stackoverflow.com/questions/1685494/what-does-this-h264-nal-header-mean
             //H.264 spec docs:  see Table 7-1 for NALu ID's
@@ -171,7 +187,7 @@ namespace MpegTS
             //int vidLen = firstLen;
             TsPacket p;
 
-            //let's do proper clean up... might be our leak
+            //let's do proper clean up...
             using (var ms = new System.IO.MemoryStream(firstLen * packets.Count))//try to get an estimate of the size needed to avoid re-sizing
             {
 

@@ -147,31 +147,46 @@ namespace MpegTS
             //assume it's Mpeg TS for now...
             var ts = new TsPacket(data);
 
-            if(!ts.IsValid)
+            if (!ts.IsValid)
             {
                 //int i = 0;
                 return false;//not valid TS packet!
             }
 
+            if (data.Length > TsPacket.PacketLength)
+            {
+                var chunk = new TsChunk(data);
+                var packs = chunk.GetTsPackets();
+
+                foreach (var p in packs)
+                    if(p.IsValid)
+                        AddTsPacket(p);
+            }
+            else
+                return AddTsPacket(ts);
+
+            return true;
+        }
+
+        private bool AddTsPacket(TsPacket ts)
+        {
             if (ts.PID != PID.H264Video)
             {
                 CheckCustomPIDs(ts);
                 return true;//not video, so ignore it for now, it is a valid packet.
             }
 
-            if (pes == null && ts.IsPayloadUnitStart)
-                pes = new MpegTS.PacketizedElementaryStream(ts);
+            //if (pes == null && ts.IsPayloadUnitStart)
+            //    pes = new MpegTS.PacketizedElementaryStream(ts);
 
-            if (ts.IsPayloadUnitStart)
+            if (ts.IsPayloadUnitStart && pes != null)
             {
-                //var lastPes = pes;//hang onto the now complete pes.
-
                 //let's take care of the old (complete) one now: push out buffers
                 //TODO: provide the time stamp/PES with this buffer, or, just provide the 
                 //PES?
-                if (pes.IsValid )//&& pes.IsComplete)
+                if (pes.IsValid && pes.IsComplete)
                 {
-                    lock(outBuffers)
+                    lock (outBuffers)
                     {
                         outBuffers.Enqueue(pes);
                         SampleCount = outBuffers.Count;
@@ -189,14 +204,14 @@ namespace MpegTS
                     ++bad;
 
                 pes = new MpegTS.PacketizedElementaryStream(ts);//we have the new pes
-                
+
             }
             else if (pes != null)//we have already found the beginning of the stream and are building a pes
             {
                 pes.Add(ts);
             }
             else//looking for a start packet
-                ;//           
+                pes = new PacketizedElementaryStream(ts);//           
 
             return true;
         }

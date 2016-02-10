@@ -50,10 +50,10 @@ namespace DroidVid
         {
 
             running = true;
-            var finfo = new System.IO.FileInfo(FilePlayer.dir + "decode.out");
+            var finfo = new System.IO.FileInfo(FilePlayer.SAMPLE);//FilePlayer.dir + "decode.out");
             var fs = finfo.OpenRead();
             int bytes, count, inIndex =0;
-            int buffSize = 188;
+            int buffSize = TsPacket.PacketLength*4;
             var buff = new byte[buffSize];
             var ts = new MpegTS.TsPacket(buff);
             buffEx = new BufferExtractor();
@@ -97,14 +97,14 @@ namespace DroidVid
                     {
                         while (fs.CanRead && buffEx.SampleCount == 0)
                         {
-                            if (fs.Length - fs.Position < 188)
+                            if (fs.Length - fs.Position < buffSize)
                             {
                                 eof = true;
                                 break;//we're @ EOF
                             }
 
                             //we need a new buffer every loop!
-                            buff = new byte[752];
+                            buff = new byte[buffSize];
                             bytes = await fs.ReadAsync(buff, 0, buff.Length)
                                             .ConfigureAwait(false);
 

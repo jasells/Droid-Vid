@@ -40,12 +40,21 @@ namespace MpegTS
         {
             get
             {
-                ulong val = ((ulong)BitConverter.ToUInt32(data, 6)) << 16;
-                return val & BitConverter.ToUInt16(data, 6 + 4);
+                long p = data.Position;
+
+                data.Position = 6;//this is where we want to start looking 
+
+                byte[] b = new byte[6];//just happens that we also want 6 bytes
+                data.Read(b, 0, 6);
+
+                data.Position = p;//move cursor back
+
+                ulong val = ((ulong)BitConverter.ToUInt32(b, 0)) << 16;
+                return val | BitConverter.ToUInt16(b, 4);//Read last 2 bytes and combine them
             }
         } 
 
-        private byte[] data;//from parent TsPacket
+        private TsChunk data;//from parent TsPacket
 
         internal AdaptationField(TsPacket parent)
         {

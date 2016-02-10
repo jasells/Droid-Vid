@@ -49,6 +49,11 @@ namespace MpegTS
         /// </summary>
         public const byte SyncByte = 0x47;
 
+        /// <summary>
+        /// Mpeg TS packets *msut* be this length
+        /// </summary>
+        public const int PacketLength = 188;
+
         public bool IsValid { get { return data[0] == SyncByte; } }
 
         /// <summary>

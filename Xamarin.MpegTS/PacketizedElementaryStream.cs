@@ -29,7 +29,7 @@ namespace MpegTS
         //    return val;
         //}
 
-        public Queue<TsPacket> packets;
+        private Queue<TsPacket> packets;
 
         private ushort ExtensionLen
         {
@@ -188,7 +188,7 @@ namespace MpegTS
             TsPacket p;
 
             //let's do proper clean up...
-            using (var ms = new System.IO.MemoryStream(firstLen * packets.Count))//try to get an estimate of the size needed to avoid re-sizing
+            using (var ms = new System.IO.MemoryStream((TsPacket.PacketLength -4)* packets.Count))//try to get an estimate of the size needed to avoid re-sizing
             {
 
                 //create a tmp que to stuff the packets back into so we don't lose them

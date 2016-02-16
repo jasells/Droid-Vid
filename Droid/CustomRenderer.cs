@@ -20,7 +20,7 @@ namespace DoidVid.Droid
     {
         private Android.Views.SurfaceView surf;
         private DroidVid.BufferPlayer bp;
-        private static string dir = "/Removable/MicroSD/";//"/mnt/shared/extSdCard/";//
+        private static string dir = "/mnt/extSdCard/";//"/Removable/MicroSD/";//"/mnt/shared/extSdCard/";//
         private static String SAMPLE = dir + "Video_2014_5_7__15_33_44.mpg";//"Video_2014_5_8__9_12_35.mpg";//"Video_2014_5_6__15_55_19.mpg";//
 
 

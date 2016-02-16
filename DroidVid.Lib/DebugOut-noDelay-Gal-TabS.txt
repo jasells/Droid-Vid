@@ -1,0 +1,765 @@
+﻿Forwarding debugger port 8837
+Detecting existing process
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.Droid.dll
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Lib.dll
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.dll
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/FormsViewGroup.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Android.Support.v4.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Core.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Platform.Android.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Xaml.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.Concurrent.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.Annotations.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.EventBasedAsync.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Contracts.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Debug.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tools.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tracing.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Dynamic.Runtime.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Globalization.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.IO.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Expressions.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Parallel.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Queryable.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.NetworkInformation.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Primitives.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Requests.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ObjectModel.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.ILGeneration.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.Lightweight.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Extensions.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Primitives.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Resources.ResourceManager.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Extensions.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.WindowsRuntime.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Numerics.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Json.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Primitives.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Xml.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Security.Principal.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Http.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Primitives.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Security.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.Extensions.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.RegularExpressions.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.Parallel.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Timer.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.ReaderWriter.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XDocument.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XmlSerializer.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.MpegTS.dll
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Mono.Android.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Core.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.dll [External]
+Loaded assembly: MonoDroidConstructors [External]
+Thread started:  #2
+Thread started: <Thread Pool> #3
+Thread started: <Thread Pool> #4
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.dll [External]
+Loaded assembly: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.dll [External]
+Loaded assembly: Anonymously Hosted DynamicMethods Assembly [External]
+[SELinux] Function: selinux_android_load_priority [0], There is no sepolicy file.
+[SELinux]  
+[SELinux] Function: selinux_android_load_priority [1], There is no sepolicy version file.
+[SELinux]  
+[SELinux] Function: selinux_android_load_priority , priority version is VE=SEPF_SM-T800_4.4.2_0030
+[SELinux]  
+[SELinux]  
+[SELinux] selinux_android_seapp_context_reload: seapp_contexts file is loaded from /seapp_contexts
+[SELinux] [DEBUG] seapp_context_lookup: seinfoCategory = default
+[SELinux] [DEBUG] seapp_context_lookup: seinfoCategory = default
+[monodroid] Using override path: /data/data/com.companyname.xamarinforms.droidvid/files/.__override__
+[monodroid] Using override path: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__
+[monodroid] Trying to load sgen from: /data/data/com.companyname.xamarinforms.droidvid/files/.__override__/libmonosgen-2.0.so
+[monodroid] Trying to load sgen from: /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/libmonosgen-2.0.so
+[monodroid] Trying to load sgen from: /data/app-lib/com.companyname.xamarinforms.droidvid-1/libmonosgen-2.0.so
+[monodroid] Trying to load sgen from: /data/data/com.companyname.xamarinforms.droidvid/files/.__override__/links/libmonosgen-2.0.so
+[monodroid-debug] Trying to initialize the debugger with options: --debugger-agent=transport=dt_socket,loglevel=0,address=127.0.0.1:8837,server=y,embedding=1
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/mscorlib.dll'.
+[Mono] Image addref mscorlib[0x77532980] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/mscorlib.dll[0x7924f518]: 2
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/mscorlib.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-mscorlib.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/mscorlib.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-mscorlib.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/mscorlib.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/mscorlib.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/mscorlib/mscorlib.config'.
+[Mono] Assembly mscorlib[0x77532980] added to domain RootDomain, ref_count=1
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.Droid.dll'.
+[Mono] Image addref DroidVid.Xamarin.Droid[0x7c367980] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.Droid.dll[0x7c366f48]: 2
+[Mono] Assembly DroidVid.Xamarin.Droid[0x7c367980] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.Droid.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-DroidVid.Xamarin.Droid.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/DroidVid.Xamarin.Droid.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-DroidVid.Xamarin.Droid.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.Droid.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.Droid.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/DroidVid.Xamarin.Droid/DroidVid.Xamarin.Droid.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Lib.dll'.
+[Mono] Image addref DroidVid.Lib[0x7c368880] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Lib.dll[0x7c367d28]: 2
+[Mono] Assembly DroidVid.Lib[0x7c368880] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Lib.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-DroidVid.Lib.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/DroidVid.Lib.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-DroidVid.Lib.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Lib.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Lib.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/DroidVid.Lib/DroidVid.Lib.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.dll'.
+[Mono] Image addref DroidVid.Xamarin[0x7c3697e0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.dll[0x7c368cb0]: 2
+[Mono] Assembly DroidVid.Xamarin[0x7c3697e0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-DroidVid.Xamarin.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/DroidVid.Xamarin.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-DroidVid.Xamarin.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/DroidVid.Xamarin.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/DroidVid.Xamarin/DroidVid.Xamarin.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/FormsViewGroup.dll'.
+[Mono] Image addref FormsViewGroup[0x7c387750] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/FormsViewGroup.dll[0x7c369b70]: 2
+[Mono] Assembly FormsViewGroup[0x7c387750] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/FormsViewGroup.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-FormsViewGroup.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/FormsViewGroup.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-FormsViewGroup.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/FormsViewGroup.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/FormsViewGroup.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/FormsViewGroup/FormsViewGroup.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Android.Support.v4.dll'.
+[Mono] Image addref Xamarin.Android.Support.v4[0x7c388550] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Android.Support.v4.dll[0x7c387a08]: 2
+[Mono] Assembly Xamarin.Android.Support.v4[0x7c388550] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Android.Support.v4.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Xamarin.Android.Support.v4.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/Xamarin.Android.Support.v4.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Xamarin.Android.Support.v4.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Android.Support.v4.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Android.Support.v4.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/Xamarin.Android.Support.v4/Xamarin.Android.Support.v4.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Core.dll'.
+[Mono] Image addref Xamarin.Forms.Core[0x7c3e9358] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Core.dll[0x7c388788]: 2
+[Mono] Assembly Xamarin.Forms.Core[0x7c3e9358] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Core.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Xamarin.Forms.Core.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/Xamarin.Forms.Core.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Xamarin.Forms.Core.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Core.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Core.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/Xamarin.Forms.Core/Xamarin.Forms.Core.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Platform.Android.dll'.
+[Mono] Image addref Xamarin.Forms.Platform.Android[0x7c3ea178] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Platform.Android.dll[0x7c3e9638]: 2
+[Mono] Assembly Xamarin.Forms.Platform.Android[0x7c3ea178] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Platform.Android.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Xamarin.Forms.Platform.Android.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/Xamarin.Forms.Platform.Android.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Xamarin.Forms.Platform.Android.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Platform.Android.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Platform.Android.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/Xamarin.Forms.Platform.Android/Xamarin.Forms.Platform.Android.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Xaml.dll'.
+[Mono] Image addref Xamarin.Forms.Xaml[0x7c3eaf40] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Xaml.dll[0x7c3ea3a8]: 2
+[Mono] Assembly Xamarin.Forms.Xaml[0x7c3eaf40] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Xaml.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Xamarin.Forms.Xaml.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/Xamarin.Forms.Xaml.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Xamarin.Forms.Xaml.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Xaml.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.Forms.Xaml.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/Xamarin.Forms.Xaml/Xamarin.Forms.Xaml.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.Concurrent.dll'.
+[Mono] Image addref System.Collections.Concurrent[0x7c3f9d98] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.Concurrent.dll[0x7c3f9270]: 2
+[Mono] Assembly System.Collections.Concurrent[0x7c3f9d98] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.Concurrent.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Collections.Concurrent.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Collections.Concurrent.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Collections.Concurrent.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.Concurrent.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.Concurrent.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Collections.Concurrent/System.Collections.Concurrent.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.dll'.
+[Mono] Image addref System.Collections[0x7c3fcb80] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.dll[0x7c3fc008]: 2
+[Mono] Assembly System.Collections[0x7c3fcb80] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Collections.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Collections.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Collections.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Collections.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Collections/System.Collections.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.Annotations.dll'.
+[Mono] Image addref System.ComponentModel.Annotations[0x7c3ff9f0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.Annotations.dll[0x7c3ff008]: 2
+[Mono] Assembly System.ComponentModel.Annotations[0x7c3ff9f0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.Annotations.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ComponentModel.Annotations.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.ComponentModel.Annotations.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ComponentModel.Annotations.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.Annotations.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.Annotations.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.ComponentModel.Annotations/System.ComponentModel.Annotations.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.dll'.
+[Mono] Image addref System.ComponentModel[0x7d792800] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.dll[0x7d792008]: 2
+[Mono] Assembly System.ComponentModel[0x7d792800] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ComponentModel.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.ComponentModel.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ComponentModel.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.ComponentModel/System.ComponentModel.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.EventBasedAsync.dll'.
+[Mono] Image addref System.ComponentModel.EventBasedAsync[0x7d797678] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.EventBasedAsync.dll[0x7d792a98]: 2
+[Mono] Assembly System.ComponentModel.EventBasedAsync[0x7d797678] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.EventBasedAsync.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ComponentModel.EventBasedAsync.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.ComponentModel.EventBasedAsync.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ComponentModel.EventBasedAsync.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.EventBasedAsync.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ComponentModel.EventBasedAsync.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.ComponentModel.EventBasedAsync/System.ComponentModel.EventBasedAsync.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Contracts.dll'.
+[Mono] Image addref System.Diagnostics.Contracts[0x7d79a480] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Contracts.dll[0x7d797910]: 2
+[Mono] Assembly System.Diagnostics.Contracts[0x7d79a480] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Contracts.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Diagnostics.Contracts.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Diagnostics.Contracts.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Diagnostics.Contracts.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Contracts.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Contracts.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Diagnostics.Contracts/System.Diagnostics.Contracts.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Debug.dll'.
+[Mono] Image addref System.Diagnostics.Debug[0x7d79d2b0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Debug.dll[0x7d79a728]: 2
+[Mono] Assembly System.Diagnostics.Debug[0x7d79d2b0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Debug.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Diagnostics.Debug.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Diagnostics.Debug.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Diagnostics.Debug.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Debug.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Debug.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Diagnostics.Debug/System.Diagnostics.Debug.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tools.dll'.
+[Mono] Image addref System.Diagnostics.Tools[0x7d7a00d8] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tools.dll[0x7d79d568]: 2
+[Mono] Assembly System.Diagnostics.Tools[0x7d7a00d8] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tools.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Diagnostics.Tools.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Diagnostics.Tools.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Diagnostics.Tools.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tools.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tools.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Diagnostics.Tools/System.Diagnostics.Tools.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tracing.dll'.
+[Mono] Image addref System.Diagnostics.Tracing[0x7d7a0ed0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tracing.dll[0x7d7a03a0]: 2
+[Mono] Assembly System.Diagnostics.Tracing[0x7d7a0ed0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tracing.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Diagnostics.Tracing.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Diagnostics.Tracing.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Diagnostics.Tracing.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tracing.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Diagnostics.Tracing.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Diagnostics.Tracing/System.Diagnostics.Tracing.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Dynamic.Runtime.dll'.
+[Mono] Image addref System.Dynamic.Runtime[0x7d7a3d18] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Dynamic.Runtime.dll[0x7d7a31e0]: 2
+[Mono] Assembly System.Dynamic.Runtime[0x7d7a3d18] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Dynamic.Runtime.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Dynamic.Runtime.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Dynamic.Runtime.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Dynamic.Runtime.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Dynamic.Runtime.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Dynamic.Runtime.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Dynamic.Runtime/System.Dynamic.Runtime.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Globalization.dll'.
+[Mono] Image addref System.Globalization[0x7d7a6b28] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Globalization.dll[0x7d7a6080]: 2
+[Mono] Assembly System.Globalization[0x7d7a6b28] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Globalization.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Globalization.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Globalization.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Globalization.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Globalization.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Globalization.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Globalization/System.Globalization.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.IO.dll'.
+[Mono] Image addref System.IO[0x7d7a9a30] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.IO.dll[0x7d7a9008]: 2
+[Mono] Assembly System.IO[0x7d7a9a30] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.IO.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.IO.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.IO.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.IO.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.IO.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.IO.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.IO/System.IO.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.dll'.
+[Mono] Image addref System.Linq[0x7d7ac808] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.dll[0x7d7ac008]: 2
+[Mono] Assembly System.Linq[0x7d7ac808] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Linq.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Linq.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Linq.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Linq/System.Linq.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Expressions.dll'.
+[Mono] Image addref System.Linq.Expressions[0x7d7b1688] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Expressions.dll[0x7d7acba8]: 2
+[Mono] Assembly System.Linq.Expressions[0x7d7b1688] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Expressions.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Linq.Expressions.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Linq.Expressions.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Linq.Expressions.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Expressions.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Expressions.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Linq.Expressions/System.Linq.Expressions.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Parallel.dll'.
+[Mono] Image addref System.Linq.Parallel[0x7d7b4490] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Parallel.dll[0x7d7b1910]: 2
+[Mono] Assembly System.Linq.Parallel[0x7d7b4490] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Parallel.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Linq.Parallel.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Linq.Parallel.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Linq.Parallel.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Parallel.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Parallel.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Linq.Parallel/System.Linq.Parallel.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Queryable.dll'.
+[Mono] Image addref System.Linq.Queryable[0x7d7b72b0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Queryable.dll[0x7d7b4728]: 2
+[Mono] Assembly System.Linq.Queryable[0x7d7b72b0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Queryable.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Linq.Queryable.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Linq.Queryable.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Linq.Queryable.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Queryable.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Linq.Queryable.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Linq.Queryable/System.Linq.Queryable.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.NetworkInformation.dll'.
+[Mono] Image addref System.Net.NetworkInformation[0x7d7ba0f0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.NetworkInformation.dll[0x7d7b7600]: 2
+[Mono] Assembly System.Net.NetworkInformation[0x7d7ba0f0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.NetworkInformation.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Net.NetworkInformation.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Net.NetworkInformation.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Net.NetworkInformation.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.NetworkInformation.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.NetworkInformation.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Net.NetworkInformation/System.Net.NetworkInformation.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Primitives.dll'.
+[Mono] Image addref System.Net.Primitives[0x7d7baed0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Primitives.dll[0x7d7ba3c8]: 2
+[Mono] Assembly System.Net.Primitives[0x7d7baed0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Primitives.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Net.Primitives.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Net.Primitives.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Net.Primitives.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Primitives.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Primitives.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Net.Primitives/System.Net.Primitives.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Requests.dll'.
+[Mono] Image addref System.Net.Requests[0x7d7bdcd0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Requests.dll[0x7d7bd1e8]: 2
+[Mono] Assembly System.Net.Requests[0x7d7bdcd0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Requests.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Net.Requests.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Net.Requests.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Net.Requests.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Requests.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Net.Requests.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Net.Requests/System.Net.Requests.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ObjectModel.dll'.
+[Mono] Image addref System.ObjectModel[0x7d7c0ae8] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ObjectModel.dll[0x7d7c0008]: 2
+[Mono] Assembly System.ObjectModel[0x7d7c0ae8] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ObjectModel.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ObjectModel.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.ObjectModel.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ObjectModel.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ObjectModel.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ObjectModel.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.ObjectModel/System.ObjectModel.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.dll'.
+[Mono] Image addref System.Reflection[0x7d7c3908] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.dll[0x7d7c3008]: 2
+[Mono] Assembly System.Reflection[0x7d7c3908] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Reflection.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Reflection/System.Reflection.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.dll'.
+[Mono] Image addref System.Reflection.Emit[0x7d7c8740] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.dll[0x7d7c3c20]: 2
+[Mono] Assembly System.Reflection.Emit[0x7d7c8740] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.Emit.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Reflection.Emit.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.Emit.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Reflection.Emit/System.Reflection.Emit.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.ILGeneration.dll'.
+[Mono] Image addref System.Reflection.Emit.ILGeneration[0x7d7cb5a8] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.ILGeneration.dll[0x7d7c8a68]: 2
+[Mono] Assembly System.Reflection.Emit.ILGeneration[0x7d7cb5a8] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.ILGeneration.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.Emit.ILGeneration.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Reflection.Emit.ILGeneration.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.Emit.ILGeneration.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.ILGeneration.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.ILGeneration.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Reflection.Emit.ILGeneration/System.Reflection.Emit.ILGeneration.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.Lightweight.dll'.
+[Mono] Image addref System.Reflection.Emit.Lightweight[0x7d7ce3f8] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.Lightweight.dll[0x7d7cb8e0]: 2
+[Mono] Assembly System.Reflection.Emit.Lightweight[0x7d7ce3f8] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.Lightweight.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.Emit.Lightweight.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Reflection.Emit.Lightweight.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.Emit.Lightweight.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.Lightweight.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Emit.Lightweight.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Reflection.Emit.Lightweight/System.Reflection.Emit.Lightweight.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Extensions.dll'.
+[Mono] Image addref System.Reflection.Extensions[0x7d7d1220] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Extensions.dll[0x7d7ce740]: 2
+[Mono] Assembly System.Reflection.Extensions[0x7d7d1220] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Extensions.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.Extensions.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Reflection.Extensions.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.Extensions.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Extensions.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Extensions.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Reflection.Extensions/System.Reflection.Extensions.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Primitives.dll'.
+[Mono] Image addref System.Reflection.Primitives[0x7d7d40f0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Primitives.dll[0x7d7d15f8]: 2
+[Mono] Assembly System.Reflection.Primitives[0x7d7d40f0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Primitives.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.Primitives.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Reflection.Primitives.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Reflection.Primitives.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Primitives.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Reflection.Primitives.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Reflection.Primitives/System.Reflection.Primitives.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Resources.ResourceManager.dll'.
+[Mono] Image addref System.Resources.ResourceManager[0x7d7d4f18] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Resources.ResourceManager.dll[0x7d7d44e0]: 2
+[Mono] Assembly System.Resources.ResourceManager[0x7d7d4f18] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Resources.ResourceManager.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Resources.ResourceManager.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Resources.ResourceManager.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Resources.ResourceManager.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Resources.ResourceManager.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Resources.ResourceManager.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Resources.ResourceManager/System.Resources.ResourceManager.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.dll'.
+[Mono] Image addref System.Runtime[0x7d7d7d18] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.dll[0x7d7d72c0]: 2
+[Mono] Assembly System.Runtime[0x7d7d7d18] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Runtime.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Runtime/System.Runtime.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Extensions.dll'.
+[Mono] Image addref System.Runtime.Extensions[0x7d7dcb68] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Extensions.dll[0x7d7dc0c8]: 2
+[Mono] Assembly System.Runtime.Extensions[0x7d7dcb68] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Extensions.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Extensions.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Runtime.Extensions.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Extensions.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Extensions.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Extensions.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Runtime.Extensions/System.Runtime.Extensions.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.dll'.
+[Mono] Image addref System.Runtime.InteropServices[0x7d7df9a8] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.dll[0x7d7df008]: 2
+[Mono] Assembly System.Runtime.InteropServices[0x7d7df9a8] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.InteropServices.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Runtime.InteropServices.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.InteropServices.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Runtime.InteropServices/System.Runtime.InteropServices.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.WindowsRuntime.dll'.
+[Mono] Image addref System.Runtime.InteropServices.WindowsRuntime[0x7d7e2830] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.WindowsRuntime.dll[0x7d7e2008]: 2
+[Mono] Assembly System.Runtime.InteropServices.WindowsRuntime[0x7d7e2830] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.WindowsRuntime.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.InteropServices.WindowsRuntime.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Runtime.InteropServices.WindowsRuntime.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.InteropServices.WindowsRuntime.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.WindowsRuntime.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.InteropServices.WindowsRuntime.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Runtime.InteropServices.WindowsRuntime/System.Runtime.InteropServices.WindowsRuntime.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Numerics.dll'.
+[Mono] Image addref System.Runtime.Numerics[0x7d7e7638] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Numerics.dll[0x7d7e2be8]: 2
+[Mono] Assembly System.Runtime.Numerics[0x7d7e7638] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Numerics.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Numerics.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Runtime.Numerics.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Numerics.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Numerics.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Numerics.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Runtime.Numerics/System.Runtime.Numerics.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Json.dll'.
+[Mono] Image addref System.Runtime.Serialization.Json[0x7d7ea490] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Json.dll[0x7d7e7a00]: 2
+[Mono] Assembly System.Runtime.Serialization.Json[0x7d7ea490] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Json.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Serialization.Json.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Runtime.Serialization.Json.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Serialization.Json.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Json.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Json.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Runtime.Serialization.Json/System.Runtime.Serialization.Json.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Primitives.dll'.
+[Mono] Image addref System.Runtime.Serialization.Primitives[0x7d7ed3e8] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Primitives.dll[0x7d7ea890]: 2
+[Mono] Assembly System.Runtime.Serialization.Primitives[0x7d7ed3e8] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Primitives.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Serialization.Primitives.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Runtime.Serialization.Primitives.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Serialization.Primitives.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Primitives.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Primitives.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Runtime.Serialization.Primitives/System.Runtime.Serialization.Primitives.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Xml.dll'.
+[Mono] Image addref System.Runtime.Serialization.Xml[0x7d7f0230] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Xml.dll[0x7d7ed6c0]: 2
+[Mono] Assembly System.Runtime.Serialization.Xml[0x7d7f0230] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Xml.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Serialization.Xml.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Runtime.Serialization.Xml.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Serialization.Xml.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Xml.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.Xml.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Runtime.Serialization.Xml/System.Runtime.Serialization.Xml.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Security.Principal.dll'.
+[Mono] Image addref System.Security.Principal[0x7d7f3060] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Security.Principal.dll[0x7d7f0720]: 2
+[Mono] Assembly System.Security.Principal[0x7d7f3060] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Security.Principal.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Security.Principal.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Security.Principal.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Security.Principal.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Security.Principal.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Security.Principal.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Security.Principal/System.Security.Principal.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Http.dll'.
+[Mono] Image addref System.ServiceModel.Http[0x7d7f3e68] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Http.dll[0x7d7f3560]: 2
+[Mono] Assembly System.ServiceModel.Http[0x7d7f3e68] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Http.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ServiceModel.Http.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.ServiceModel.Http.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ServiceModel.Http.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Http.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Http.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.ServiceModel.Http/System.ServiceModel.Http.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Primitives.dll'.
+[Mono] Image addref System.ServiceModel.Primitives[0x7d7f6ca8] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Primitives.dll[0x7d7f63a0]: 2
+[Mono] Assembly System.ServiceModel.Primitives[0x7d7f6ca8] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Primitives.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ServiceModel.Primitives.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.ServiceModel.Primitives.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ServiceModel.Primitives.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Primitives.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Primitives.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.ServiceModel.Primitives/System.ServiceModel.Primitives.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Security.dll'.
+[Mono] Image addref System.ServiceModel.Security[0x7d7faad8] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Security.dll[0x7d7fa1f0]: 2
+[Mono] Assembly System.ServiceModel.Security[0x7d7faad8] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Security.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ServiceModel.Security.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.ServiceModel.Security.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.ServiceModel.Security.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Security.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.ServiceModel.Security.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.ServiceModel.Security/System.ServiceModel.Security.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.dll'.
+[Mono] Image addref System.Text.Encoding[0x7d7fd8f8] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.dll[0x7d7fd038]: 2
+[Mono] Assembly System.Text.Encoding[0x7d7fd8f8] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Text.Encoding.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Text.Encoding.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Text.Encoding.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Text.Encoding/System.Text.Encoding.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.Extensions.dll'.
+[Mono] Image addref System.Text.Encoding.Extensions[0x7d800748] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.Extensions.dll[0x7d800008]: 2
+[Mono] Assembly System.Text.Encoding.Extensions[0x7d800748] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.Extensions.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Text.Encoding.Extensions.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Text.Encoding.Extensions.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Text.Encoding.Extensions.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.Extensions.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.Encoding.Extensions.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Text.Encoding.Extensions/System.Text.Encoding.Extensions.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.RegularExpressions.dll'.
+[Mono] Image addref System.Text.RegularExpressions[0x7d803588] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.RegularExpressions.dll[0x7d803008]: 2
+[Mono] Assembly System.Text.RegularExpressions[0x7d803588] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.RegularExpressions.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Text.RegularExpressions.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Text.RegularExpressions.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Text.RegularExpressions.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.RegularExpressions.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Text.RegularExpressions.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Text.RegularExpressions/System.Text.RegularExpressions.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.dll'.
+[Mono] Image addref System.Threading[0x7d808380] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.dll[0x7d803ae8]: 2
+[Mono] Assembly System.Threading[0x7d808380] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Threading.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Threading.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Threading.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Threading/System.Threading.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.dll'.
+[Mono] Image addref System.Threading.Tasks[0x7d80b1c0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.dll[0x7d8088f0]: 2
+[Mono] Assembly System.Threading.Tasks[0x7d80b1c0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Threading.Tasks.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Threading.Tasks.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Threading.Tasks.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Threading.Tasks/System.Threading.Tasks.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.Parallel.dll'.
+[Mono] Image addref System.Threading.Tasks.Parallel[0x7d80e018] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.Parallel.dll[0x7d80b740]: 2
+[Mono] Assembly System.Threading.Tasks.Parallel[0x7d80e018] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.Parallel.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Threading.Tasks.Parallel.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Threading.Tasks.Parallel.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Threading.Tasks.Parallel.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.Parallel.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Tasks.Parallel.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Threading.Tasks.Parallel/System.Threading.Tasks.Parallel.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Timer.dll'.
+[Mono] Image addref System.Threading.Timer[0x7d80ee08] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Timer.dll[0x7d80e5a8]: 2
+[Mono] Assembly System.Threading.Timer[0x7d80ee08] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Timer.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Threading.Timer.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Threading.Timer.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Threading.Timer.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Timer.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Threading.Timer.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Threading.Timer/System.Threading.Timer.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.ReaderWriter.dll'.
+[Mono] Image addref System.Xml.ReaderWriter[0x7d811c20] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.ReaderWriter.dll[0x7d8113d0]: 2
+[Mono] Assembly System.Xml.ReaderWriter[0x7d811c20] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.ReaderWriter.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Xml.ReaderWriter.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Xml.ReaderWriter.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Xml.ReaderWriter.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.ReaderWriter.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.ReaderWriter.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Xml.ReaderWriter/System.Xml.ReaderWriter.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XDocument.dll'.
+[Mono] Image addref System.Xml.XDocument[0x7d814a30] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XDocument.dll[0x7d814200]: 2
+[Mono] Assembly System.Xml.XDocument[0x7d814a30] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XDocument.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Xml.XDocument.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Xml.XDocument.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Xml.XDocument.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XDocument.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XDocument.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Xml.XDocument/System.Xml.XDocument.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XmlSerializer.dll'.
+[Mono] Image addref System.Xml.XmlSerializer[0x7d817878] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XmlSerializer.dll[0x7d817008]: 2
+[Mono] Assembly System.Xml.XmlSerializer[0x7d817878] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XmlSerializer.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Xml.XmlSerializer.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Xml.XmlSerializer.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Xml.XmlSerializer.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XmlSerializer.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.XmlSerializer.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Xml.XmlSerializer/System.Xml.XmlSerializer.config'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.MpegTS.dll'.
+[Mono] Image addref Xamarin.MpegTS[0x7d81a668] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.MpegTS.dll[0x7d81a008]: 2
+[Mono] Assembly Xamarin.MpegTS[0x7d81a668] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.MpegTS.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Xamarin.MpegTS.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/Xamarin.MpegTS.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Xamarin.MpegTS.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.MpegTS.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Xamarin.MpegTS.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/Xamarin.MpegTS/Xamarin.MpegTS.config'.
+[monodroid-gc] GREF GC Threshold: 46080
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Mono.Android.dll'.
+[Mono] Image addref Mono.Android[0x7d821608] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Mono.Android.dll[0x7d821008]: 2
+[Mono] Assembly Mono.Android[0x7d821608] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Mono.Android.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Mono.Android.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/Mono.Android.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-Mono.Android.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Mono.Android.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/Mono.Android.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/Mono.Android/Mono.Android.config'.
+[Mono] Assembly Ref addref Mono.Android[0x7d821608] -> mscorlib[0x77532980]: 2
+[Mono] DllImport attempting to load: '__Internal'.
+[Mono] DllImport loaded library '(null)'.
+[Mono] DllImport searching in: '__Internal' ('(null)').
+[Mono] Searching for '_monodroid_lref_log_new'.
+[Mono] Probing '_monodroid_lref_log_new'.
+[Mono] Found as '_monodroid_lref_log_new'.
+[Mono] DllImport searching in: '__Internal' ('(null)').
+[Mono] Searching for '_monodroid_lref_log_delete'.
+[Mono] Probing '_monodroid_lref_log_delete'.
+[Mono] Found as '_monodroid_lref_log_delete'.
+[Mono] DllImport searching in: '__Internal' ('(null)').
+[Mono] Searching for '_monodroid_gref_log_new'.
+[Mono] Probing '_monodroid_gref_log_new'.
+[Mono] Found as '_monodroid_gref_log_new'.
+[Mono] DllImport searching in: '__Internal' ('(null)').
+[Mono] Searching for '_monodroid_get_identity_hash_code'.
+[Mono] Probing '_monodroid_get_identity_hash_code'.
+[Mono] Found as '_monodroid_get_identity_hash_code'.
+[Mono] DllImport searching in: '__Internal' ('(null)').
+[Mono] Searching for '_monodroid_gref_log'.
+[Mono] Probing '_monodroid_gref_log'.
+[Mono] Found as '_monodroid_gref_log'.
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Core.dll'.
+[Mono] Image addref System.Core[0x7f6482b8] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Core.dll[0x7f6284b8]: 2
+[Mono] Assembly System.Core[0x7f6482b8] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Core.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Core.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Core.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Core.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Core.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Core.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Core/System.Core.config'.
+[Mono] Assembly Ref addref Mono.Android[0x7d821608] -> System.Core[0x7f6482b8]: 2
+[Mono] Assembly Ref addref System.Core[0x7f6482b8] -> mscorlib[0x77532980]: 3
+[Mono] DllImport searching in: '__Internal' ('(null)').
+[Mono] Searching for '_monodroid_gref_log_delete'.
+[Mono] Probing '_monodroid_gref_log_delete'.
+[Mono] Found as '_monodroid_gref_log_delete'.
+[Mono] DllImport searching in: '__Internal' ('(null)').
+[Mono] Searching for '_monodroid_gc_wait_for_bridge_processing'.
+[Mono] Probing '_monodroid_gc_wait_for_bridge_processing'.
+[Mono] Found as '_monodroid_gc_wait_for_bridge_processing'.
+[Mono] Assembly Ref addref FormsViewGroup[0x7c387750] -> mscorlib[0x77532980]: 4
+[Mono] Assembly Ref addref FormsViewGroup[0x7c387750] -> Mono.Android[0x7d821608]: 2
+[Mono] Assembly Ref addref Xamarin.Android.Support.v4[0x7c388550] -> mscorlib[0x77532980]: 5
+[Mono] Assembly Ref addref Xamarin.Android.Support.v4[0x7c388550] -> Mono.Android[0x7d821608]: 3
+[Mono] Assembly Ref addref Xamarin.Forms.Platform.Android[0x7c3ea178] -> Mono.Android[0x7d821608]: 4
+[Mono] Assembly Ref addref DroidVid.Xamarin.Droid[0x7c367980] -> Xamarin.Forms.Platform.Android[0x7c3ea178]: 2
+[Mono] Assembly Ref addref DroidVid.Xamarin.Droid[0x7c367980] -> Mono.Android[0x7d821608]: 5
+[Mono] Assembly Ref addref Xamarin.Forms.Platform.Android[0x7c3ea178] -> Xamarin.Forms.Core[0x7c3e9358]: 2
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.Runtime[0x7d7d7d18]: 2
+[Mono] Assembly Ref addref System.Runtime[0x7d7d7d18] -> mscorlib[0x77532980]: 6
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.ObjectModel[0x7d7c0ae8]: 2
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.dll'.
+[Mono] Image addref System[0x7f97f4d0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.dll[0x7c2c7278]: 2
+[Mono] Assembly System[0x7f97f4d0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System/System.config'.
+[Mono] Assembly Ref addref System.ObjectModel[0x7d7c0ae8] -> System[0x7f97f4d0]: 2
+[Mono] Assembly Ref addref Xamarin.Forms.Platform.Android[0x7c3ea178] -> mscorlib[0x77532980]: 7
+[Mono] Assembly Ref addref DroidVid.Xamarin.Droid[0x7c367980] -> mscorlib[0x77532980]: 8
+[Mono] Assembly Ref addref DroidVid.Xamarin.Droid[0x7c367980] -> DroidVid.Xamarin[0x7c3697e0]: 2
+[Mono] Assembly Ref addref DroidVid.Xamarin[0x7c3697e0] -> Xamarin.Forms.Core[0x7c3e9358]: 3
+[Mono] Assembly Ref addref System[0x7f97f4d0] -> mscorlib[0x77532980]: 9
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.Collections[0x7c3fcb80]: 2
+[Mono] Assembly Ref addref System.Collections[0x7c3fcb80] -> mscorlib[0x77532980]: 10
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.Threading.Tasks[0x7d80b1c0]: 2
+[Mono] Assembly Ref addref System.Threading.Tasks[0x7d80b1c0] -> mscorlib[0x77532980]: 11
+[Mono] Assembly Ref addref DroidVid.Xamarin.Droid[0x7c367980] -> Xamarin.Forms.Core[0x7c3e9358]: 4
+[MoreInfoHPW_ViewGroup] Parent view is not a TextView
+[Mono] Assembly Ref addref Xamarin.Forms.Platform.Android[0x7c3ea178] -> System[0x7f97f4d0]: 3
+[Mono] Assembly Ref addref System.Runtime[0x7d7d7d18] -> System[0x7f97f4d0]: 4
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.IO[0x7d7a9a30]: 2
+[Mono] Assembly Ref addref System.IO[0x7d7a9a30] -> mscorlib[0x77532980]: 12
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.Reflection[0x7d7c3908]: 2
+[Mono] Assembly Ref addref System.Reflection[0x7d7c3908] -> mscorlib[0x77532980]: 13
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.Threading[0x7d808380]: 2
+[Mono] Assembly Ref addref System.Threading[0x7d808380] -> mscorlib[0x77532980]: 14
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.Runtime.Extensions[0x7d7dcb68]: 2
+[Mono] Assembly Ref addref System.Runtime.Extensions[0x7d7dcb68] -> System[0x7f97f4d0]: 5
+[Mono] Assembly Ref addref Xamarin.Forms.Platform.Android[0x7c3ea178] -> System.Core[0x7f6482b8]: 3
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.Linq.Expressions[0x7d7b1688]: 2
+[Mono] Assembly Ref addref System.Linq.Expressions[0x7d7b1688] -> System.Core[0x7f6482b8]: 4
+[Mono] Assembly Ref addref Xamarin.Forms.Platform.Android[0x7c3ea178] -> FormsViewGroup[0x7c387750]: 2
+[Mono] Assembly Ref addref System.Runtime.Extensions[0x7d7dcb68] -> mscorlib[0x77532980]: 15
+[Mono] Assembly Ref addref System.Collections[0x7c3fcb80] -> System[0x7f97f4d0]: 6
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.Linq[0x7d7ac808]: 2
+[Mono] Assembly Ref addref System.Linq[0x7d7ac808] -> System.Core[0x7f6482b8]: 5
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.Reflection.Extensions[0x7d7d1220]: 2
+[Mono] Assembly Ref addref System.Reflection.Extensions[0x7d7d1220] -> mscorlib[0x77532980]: 16
+[Mono] Assembly Ref addref Xamarin.Forms.Core[0x7c3e9358] -> System.Dynamic.Runtime[0x7d7a3d18]: 2
+[Mono] Assembly Ref addref System.Dynamic.Runtime[0x7d7a3d18] -> mscorlib[0x77532980]: 17
+[Mono] Assembly Ref addref Xamarin.Forms.Platform.Android[0x7c3ea178] -> Xamarin.Android.Support.v4[0x7c388550]: 2
+[Mono] Assembly Ref addref DroidVid.Lib[0x7c368880] -> Mono.Android[0x7d821608]: 6
+[Mono] Assembly Ref addref DroidVid.Lib[0x7c368880] -> mscorlib[0x77532980]: 18
+[Mono] Assembly Ref addref DroidVid.Xamarin[0x7c3697e0] -> System.Runtime[0x7d7d7d18]: 3
+[Mono] Assembly Ref addref Xamarin.Forms.Xaml[0x7c3eaf40] -> System.Runtime[0x7d7d7d18]: 4
+[Mono] Assembly Ref addref Xamarin.Forms.Xaml[0x7c3eaf40] -> Xamarin.Forms.Core[0x7c3e9358]: 5
+[Mono] Assembly Ref addref System.Collections.Concurrent[0x7c3f9d98] -> mscorlib[0x77532980]: 19
+[Mono] Assembly Ref addref System.ComponentModel.Annotations[0x7c3ff9f0] -> mscorlib[0x77532980]: 20
+[Mono] Assembly Ref addref System.ComponentModel[0x7d792800] -> mscorlib[0x77532980]: 21
+[Mono] Assembly Ref addref System.ComponentModel.EventBasedAsync[0x7d797678] -> mscorlib[0x77532980]: 22
+[Mono] Assembly Ref addref System.Diagnostics.Contracts[0x7d79a480] -> mscorlib[0x77532980]: 23
+[Mono] Assembly Ref addref System.Diagnostics.Debug[0x7d79d2b0] -> mscorlib[0x77532980]: 24
+[Mono] Assembly Ref addref System.Diagnostics.Tools[0x7d7a00d8] -> mscorlib[0x77532980]: 25
+[Mono] Assembly Ref addref System.Diagnostics.Tracing[0x7d7a0ed0] -> mscorlib[0x77532980]: 26
+[Mono] Assembly Ref addref System.Globalization[0x7d7a6b28] -> mscorlib[0x77532980]: 27
+[Mono] Assembly Ref addref System.Linq[0x7d7ac808] -> mscorlib[0x77532980]: 28
+[Mono] Assembly Ref addref System.Linq.Expressions[0x7d7b1688] -> mscorlib[0x77532980]: 29
+[Mono] Assembly Ref addref System.Linq.Parallel[0x7d7b4490] -> mscorlib[0x77532980]: 30
+[Mono] Assembly Ref addref System.Linq.Queryable[0x7d7b72b0] -> mscorlib[0x77532980]: 31
+[Mono] Assembly Ref addref System.Net.NetworkInformation[0x7d7ba0f0] -> mscorlib[0x77532980]: 32
+[Mono] Assembly Ref addref System.Net.Primitives[0x7d7baed0] -> mscorlib[0x77532980]: 33
+[Mono] Assembly Ref addref System.Net.Requests[0x7d7bdcd0] -> mscorlib[0x77532980]: 34
+[Mono] Assembly Ref addref System.ObjectModel[0x7d7c0ae8] -> mscorlib[0x77532980]: 35
+[Mono] Assembly Ref addref System.Reflection.Emit[0x7d7c8740] -> mscorlib[0x77532980]: 36
+[Mono] Assembly Ref addref System.Reflection.Emit.ILGeneration[0x7d7cb5a8] -> mscorlib[0x77532980]: 37
+[Mono] Assembly Ref addref System.Reflection.Emit.Lightweight[0x7d7ce3f8] -> mscorlib[0x77532980]: 38
+[Mono] Assembly Ref addref System.Reflection.Primitives[0x7d7d40f0] -> mscorlib[0x77532980]: 39
+[Mono] Assembly Ref addref System.Resources.ResourceManager[0x7d7d4f18] -> mscorlib[0x77532980]: 40
+[Mono] Assembly Ref addref System.Runtime.InteropServices[0x7d7df9a8] -> mscorlib[0x77532980]: 41
+[Mono] Assembly Ref addref System.Runtime.InteropServices.WindowsRuntime[0x7d7e2830] -> mscorlib[0x77532980]: 42
+[Mono] Assembly Ref addref System.Runtime.Numerics[0x7d7e7638] -> mscorlib[0x77532980]: 43
+[Mono] Assembly Ref addref System.Runtime.Serialization.Json[0x7d7ea490] -> mscorlib[0x77532980]: 44
+[Mono] Assembly Ref addref System.Runtime.Serialization.Primitives[0x7d7ed3e8] -> mscorlib[0x77532980]: 45
+[Mono] Assembly Ref addref System.Runtime.Serialization.Xml[0x7d7f0230] -> mscorlib[0x77532980]: 46
+[Mono] Assembly Ref addref System.Security.Principal[0x7d7f3060] -> mscorlib[0x77532980]: 47
+[Mono] Assembly Ref addref System.ServiceModel.Http[0x7d7f3e68] -> mscorlib[0x77532980]: 48
+[Mono] Assembly Ref addref System.ServiceModel.Primitives[0x7d7f6ca8] -> mscorlib[0x77532980]: 49
+[Mono] Assembly Ref addref System.ServiceModel.Security[0x7d7faad8] -> mscorlib[0x77532980]: 50
+[Mono] Assembly Ref addref System.Text.Encoding[0x7d7fd8f8] -> mscorlib[0x77532980]: 51
+[Mono] Assembly Ref addref System.Text.Encoding.Extensions[0x7d800748] -> mscorlib[0x77532980]: 52
+[Mono] Assembly Ref addref System.Text.RegularExpressions[0x7d803588] -> mscorlib[0x77532980]: 53
+[Mono] Assembly Ref addref System.Threading.Tasks.Parallel[0x7d80e018] -> mscorlib[0x77532980]: 54
+[Mono] Assembly Ref addref System.Threading.Timer[0x7d80ee08] -> mscorlib[0x77532980]: 55
+[Mono] Assembly Ref addref System.Xml.ReaderWriter[0x7d811c20] -> mscorlib[0x77532980]: 56
+[Mono] Assembly Ref addref System.Xml.XDocument[0x7d814a30] -> mscorlib[0x77532980]: 57
+[Mono] Assembly Ref addref System.Xml.XmlSerializer[0x7d817878] -> mscorlib[0x77532980]: 58
+[Mono] Assembly Ref addref Xamarin.MpegTS[0x7d81a668] -> System.Runtime[0x7d7d7d18]: 5
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.dll'.
+[Mono] Image addref System.Runtime.Serialization[0x8018a1d0] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.dll[0x802c94f8]: 2
+[Mono] Assembly System.Runtime.Serialization[0x8018a1d0] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Serialization.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Runtime.Serialization.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Runtime.Serialization.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Runtime.Serialization.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Runtime.Serialization/System.Runtime.Serialization.config'.
+[Mono] Assembly Ref addref Xamarin.Forms.Platform.Android[0x7c3ea178] -> System.Runtime.Serialization[0x8018a1d0]: 2
+[Mono] Assembly Loader probing location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.dll'.
+[Mono] Image addref System.Xml[0x802dfa88] -> /storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.dll[0x802deec8]: 2
+[Mono] Assembly System.Xml[0x802dfa88] added to domain RootDomain, ref_count=1
+[Mono] AOT module '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Xml.dll.so" not found
+[Mono] AOT module '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/lib/mono/aot-cache/arm/System.Xml.dll.so' not found: dlopen failed: library "/data/app-lib/com.companyname.xamarinforms.droidvid-1/libaot-System.Xml.dll.so" not found
+[Mono] Assembly Loader loaded assembly from location: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.dll'.
+[Mono] Config attempting to parse: '/storage/emulated/0/Android/data/com.companyname.xamarinforms.droidvid/files/.__override__/System.Xml.dll.config'.
+[Mono] Config attempting to parse: '/Users/builder/data/lanes/1978/f98871a9/source/monodroid/builds/install/mono-armv7/etc/mono/assemblies/System.Xml/System.Xml.config'.
+[Mono] Assembly Ref addref System.Runtime.Serialization[0x8018a1d0] -> System.Xml[0x802dfa88]: 2
+[Mono] Assembly Ref addref System.Xml[0x802dfa88] -> mscorlib[0x77532980]: 59
+[Mono] Assembly Ref addref System.Runtime.Serialization[0x8018a1d0] -> mscorlib[0x77532980]: 60
+[Mono] Assembly Ref addref System.Collections[0x7c3fcb80] -> System.Core[0x7f6482b8]: 6
+[Mono] Assembly Ref addref System.Core[0x7f6482b8] -> System[0x7f97f4d0]: 7
+[Mono] Assembly Ref addref System.Xml[0x802dfa88] -> System[0x7f97f4d0]: 8
+[Mono] DllImport attempting to load: '/system/lib/libc.so'.
+[Mono] DllImport loaded library '/system/lib/libc.so'.
+[Mono] DllImport searching in: '/system/lib/libc.so' ('/system/lib/libc.so').
+[Mono] Searching for 'gettid'.
+[Mono] Probing 'gettid'.
+[Mono] Found as 'gettid'.
+[Mono] Assembly Ref addref DroidVid.Xamarin.Droid[0x7c367980] -> DroidVid.Lib[0x7c368880]: 2
+[CustomRenderer] OnElementChanged()
+[Mono] Assembly Ref addref Mono.Android[0x7d821608] -> System.Xml[0x802dfa88]: 3
+[Activity] setTransGradationMode to true
+[Mono] Assembly Ref addref DroidVid.Lib[0x7c368880] -> Xamarin.MpegTS[0x7d81a668]: 2
+[Mono] Assembly Ref addref DroidVid.Lib[0x7c368880] -> System[0x7f97f4d0]: 9
+[CustomRenderer] OnAttachedToWindow()
+[DroidVid.BufferPlayer] format: {max-input-size=345600, csd-1=java.nio.ByteArrayBuffer[position=0,limit=8,capacity=8], height=480, mime=video/avc, csd-0=java.nio.ByteArrayBuffer[position=0,limit=23,capacity=23], width=720}
+[ACodec]  [] Now uninitialized
+[OMXClient] Using client-side OMX mux.
+[ACodec] [OMX.Exynos.avc.dec] Now Loaded
+[Mono] Assembly Ref addref Xamarin.MpegTS[0x7d81a668] -> System.IO[0x7d7a9a30]: 3
+[Mono] Assembly Ref addref Xamarin.MpegTS[0x7d81a668] -> System.Collections[0x7c3fcb80]: 3
+[Mono] Assembly Ref addref Xamarin.MpegTS[0x7d81a668] -> System.Threading.Tasks[0x7d80b1c0]: 3
+[Mono] Assembly Ref addref DroidVid.Lib[0x7c368880] -> System.Core[0x7f6482b8]: 7
+[DroidVid.BufferPlayer] looking for format info
+[BufferPlayer] ==================no delay=================
+[] PLATFORM VERSION : JB-MR-2
+[HWUI] EGLImpl-HWUI Protected EGL context created
+[mali_winsys] new_window_surface returns 0x3000
+[Mono] Assembly Ref addref Xamarin.MpegTS[0x7d81a668] -> System.Threading[0x7d808380]: 3
+[Mono] Assembly Ref addref Xamarin.MpegTS[0x7d81a668] -> System.Runtime.Extensions[0x7d7dcb68]: 3
+[OpenGLRenderer] Enabling debug mode 0
+[Mono] Assembly Ref addref Xamarin.MpegTS[0x7d81a668] -> System.Diagnostics.Debug[0x7d79d2b0]: 2
+[Mono] Assembly Ref addref System.Diagnostics.Debug[0x7d79d2b0] -> System[0x7f97f4d0]: 10
+[ExtractorActivity, sampleSize:] 782
+

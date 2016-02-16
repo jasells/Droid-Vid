@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.MpegTS\Xamarin.MpegTS.csproj">
-      <Project>{7898ba26-2fc3-46d6-beb5-503323fc2aa6}</Project>
+      <Project>{7898BA26-2FC3-46D6-BEB5-503323FC2AA6}</Project>
       <Name>Xamarin.MpegTS</Name>
     </ProjectReference>
   </ItemGroup>

@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DroidVid.Lib\DroidVid.Lib.csproj">
-      <Project>{22c9ae30-0633-4171-a2ae-bced6bc6a206}</Project>
+      <Project>{22C9AE30-0633-4171-A2AE-BCED6BC6A206}</Project>
       <Name>DroidVid.Lib</Name>
     </ProjectReference>
     <ProjectReference Include="..\Xamarin.MpegTS\Xamarin.MpegTS.csproj">

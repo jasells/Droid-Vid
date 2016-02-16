@@ -2,7 +2,7 @@
 
 using Xamarin.Forms;
 
-namespace XamarinForms.DroidVid
+namespace DroidVid.XamarinForms
 {
     public class VideoView : View
     {

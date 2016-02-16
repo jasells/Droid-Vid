@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -6,8 +6,8 @@
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{74512033-F3D0-443E-9B70-494BAB21D9EF}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>XamarinForms.DroidVid</RootNamespace>
-    <AssemblyName>XamarinForms.DroidVid</AssemblyName>
+    <RootNamespace>DroidVid.XamarinForms</RootNamespace>
+    <AssemblyName>DroidVid.Xamarin</AssemblyName>
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -30,7 +30,7 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="XamarinForms.DroidVid.cs" />
+    <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainPage.cs" />
     <Compile Include="VideoView.cs" />

@@ -2,7 +2,7 @@
 
 using Xamarin.Forms;
 
-namespace XamarinForms.DroidVid
+namespace DroidVid.XamarinForms
 {
     public class App : Application
     {
@@ -25,7 +25,7 @@ namespace XamarinForms.DroidVid
 //                }
 //            };
 
-            MainPage = new XamarinForms.DroidVid.MainPage();
+            MainPage = new DroidVid.XamarinForms.MainPage();
         }
 
         protected override void OnStart()

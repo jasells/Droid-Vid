@@ -82,7 +82,7 @@ namespace DroidVid
                 //var tmpB = new byte[23 + 8];
                 //System.Buffer.BlockCopy(buff, formatStartI - 4, tmpB, 0, tmpB.Length);
 
-
+                await Task.Delay(2000);
 
                 InitializeDecoder();
 

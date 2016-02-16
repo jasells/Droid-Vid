@@ -42,13 +42,22 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BufferPlayer.cs" />
+    <Compile Include="FilePlayer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="SocketPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin.MpegTS\Xamarin.MpegTS.csproj">
+      <Project>{7898ba26-2fc3-46d6-beb5-503323fc2aa6}</Project>
+      <Name>Xamarin.MpegTS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>

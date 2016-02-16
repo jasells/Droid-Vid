@@ -89,8 +89,8 @@ namespace DroidVid
                             var pack = await sock.ReceiveAsync().ConfigureAwait(false);
 
                             //we may need to check the source here too? or specify above.
-                            if (pack.Buffer.Length != TsPacket.PacketLength )
-                                continue;//wait for next packet, not a TS packet
+                            //if (pack.Buffer.Length != TsPacket.PacketLength )
+                            //    continue;//wait for next packet, not a TS packet
 
                             //could check # of non-TS packets and abort if too many?
 

@@ -53,7 +53,7 @@ namespace DroidVid
             var finfo = new System.IO.FileInfo(FilePlayer.SAMPLE);//FilePlayer.dir + "decode.out");
             var fs = finfo.OpenRead();
             int bytes, count, inIndex =0;
-            int buffSize = TsPacket.PacketLength*4;
+            int buffSize = TsPacket.PacketLength*4;//simulate multiple TS packets grouped into a single UDP packet
             var buff = new byte[buffSize];
             var ts = new MpegTS.TsPacket(buff);
             buffEx = new BufferExtractor();

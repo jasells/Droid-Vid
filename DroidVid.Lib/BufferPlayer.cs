@@ -48,7 +48,8 @@ namespace DroidVid
 
         protected override async void Run()
         {
-
+            try
+            {
             running = true;
             var finfo = new System.IO.FileInfo(FilePlayer.SAMPLE);//FilePlayer.dir + "decode.out");
             var fs = finfo.OpenRead();
@@ -81,11 +82,10 @@ namespace DroidVid
 
                 //var tmpB = new byte[23 + 8];
                 //System.Buffer.BlockCopy(buff, formatStartI - 4, tmpB, 0, tmpB.Length);
-                try
-                {
+
                 //this delay will make it work in Xamforms.
-                Log.Debug(this.GetType().Name, "==================no delay=================");
-                //await Task.Delay(2000);
+                Log.Debug(this.GetType().Name, "================== 2s delay=================");
+                await Task.Delay(2000);
 
                 InitializeDecoder();
 
@@ -210,14 +210,12 @@ namespace DroidVid
                 {
                     Log.Debug("DecodeActivity", "error closing decoder!");
                 }
-                }
-                catch (Exception ex)
-                {
-                    Log.Debug(this.GetType().Name, ex.ToString());
-
-                }
-            }//dispose filestream,decoder, info
-
+                }//dispose filestream,decoder, info
+            }
+            catch (Exception ex)
+            {
+                Log.Debug(this.GetType().Name, ex.ToString());
+            }
             info = null;
             decoder = null;
         }

@@ -81,7 +81,8 @@ namespace DroidVid
 
                 //var tmpB = new byte[23 + 8];
                 //System.Buffer.BlockCopy(buff, formatStartI - 4, tmpB, 0, tmpB.Length);
-
+                try
+                {
                 //this delay will make it work in Xamforms.
                 Log.Debug(this.GetType().Name, "==================no delay=================");
                 //await Task.Delay(2000);
@@ -208,6 +209,12 @@ namespace DroidVid
                 catch (Exception ex)
                 {
                     Log.Debug("DecodeActivity", "error closing decoder!");
+                }
+                }
+                catch (Exception ex)
+                {
+                    Log.Debug(this.GetType().Name, ex.ToString());
+
                 }
             }//dispose filestream,decoder, info
 

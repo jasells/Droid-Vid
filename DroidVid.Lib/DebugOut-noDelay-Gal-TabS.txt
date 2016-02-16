@@ -762,4 +762,12 @@ Loaded assembly: Anonymously Hosted DynamicMethods Assembly [External]
 [Mono] Assembly Ref addref Xamarin.MpegTS[0x7d81a668] -> System.Diagnostics.Debug[0x7d79d2b0]: 2
 [Mono] Assembly Ref addref System.Diagnostics.Debug[0x7d79d2b0] -> System[0x7f97f4d0]: 10
 [ExtractorActivity, sampleSize:] 782
-
+[BufferPlayer] Java.Lang.IllegalStateException: Exception of type 'Java.Lang.IllegalStateException' was thrown.
+[BufferPlayer]   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000b] in /Users/builder/data/lanes/1978/f98871a9/source/mono/mcs/class/corlib/System.Runtime.ExceptionServices/ExceptionDispatchInfo.cs:61 
+[BufferPlayer]   at Android.Runtime.JNIEnv.CallIntMethod (IntPtr jobject, IntPtr jmethod, Android.Runtime.JValue* parms) [0x00064] in /Users/builder/data/lanes/1978/f98871a9/source/monodroid/src/Mono.Android/src/Runtime/JNIEnv.g.cs:404 
+[BufferPlayer]   at Android.Media.MediaCodec.DequeueInputBuffer (Int64 timeoutUs) [0x00044] in /Users/builder/data/lanes/1978/f98871a9/source/monodroid/src/Mono.Android/platforms/android-21/src/generated/Android.Media.MediaCodec.cs:991 
+[BufferPlayer]   at DroidVid.BufferPlayer+<Run>d__3.MoveNext () [0x003c5] in c:\Users\Joshua\Documents\GitHub\Droid-Vid\DroidVid.Lib\BufferPlayer.cs:140 
+[BufferPlayer]   --- End of managed exception stack trace ---
+[BufferPlayer] java.lang.IllegalStateException
+[BufferPlayer] 	at android.media.MediaCodec.dequeueInputBuffer(Native Method)
+[BufferPlayer] 	at dalvik.system.NativeStart.run(Native Method)

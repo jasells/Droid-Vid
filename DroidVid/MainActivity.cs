@@ -33,17 +33,6 @@ namespace DroidVid
             FilePlayer.SAMPLE = SAMPLE;
 
 
-            // Set our view from the "main" layout resource
-            //SetContentView(Resource.Layout.Main);
-
-            //// Get our button from the layout resource,
-            //// and attach an event to it
-            //Button button = FindViewById<Button>(Resource.Id.MyButton);
-            
-            //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
-
-            //vp = new Org.Videolan.Libvlc.MediaPlayer(new Org.Videolan.Libvlc.LibVLCLibVLC());
-            
             mPlayer = null;
 
             //create the surface view for drawing to, and wire up callbacks(events)
@@ -51,11 +40,7 @@ namespace DroidVid
             sv.Holder.AddCallback(this);
             sv.KeepScreenOn = true;
 
-            //System.IO.DirectoryInfo dinf = new System.IO.DirectoryInfo(dir);
-            //var dirs = dinf.Root.GetDirectories();
-
             SetContentView(sv);
-
 
         }
 

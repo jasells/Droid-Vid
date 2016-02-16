@@ -4,11 +4,11 @@ using Xamarin.Forms;
 
 namespace DroidVid.XamarinForms
 {
-    public class VideoView : View
+    public class VideoView : ContentView
     {
         public VideoView()
         {
-
+            Content = new Label(){Text= "Custom renderer not found!"};
         }
     }
 }

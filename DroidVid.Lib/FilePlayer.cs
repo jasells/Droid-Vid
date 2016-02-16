@@ -58,8 +58,10 @@ namespace DroidVid
 
         protected abstract void Run();
 
-        protected void InitializeDecoder()
+        protected async void InitializeDecoder()
         {
+
+
             decoder.Configure(format, surface, null, MediaCodecConfigFlags.None);
             decoder.Start();
 

@@ -83,7 +83,7 @@ namespace DroidVid
                 //System.Buffer.BlockCopy(buff, formatStartI - 4, tmpB, 0, tmpB.Length);
 
                 //this delay will make it work in Xamforms.
-                await Task.Delay(2000);
+                await Task.Delay(1000);
 
                 InitializeDecoder();
 

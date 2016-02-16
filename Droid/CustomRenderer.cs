@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -16,7 +17,7 @@ using Debug = Android.Util.DebugUtils;
 
 namespace DoidVid.Droid
 {
-    public class CustomRenderer: Xamarin.Forms.Platform.Android.ViewRenderer
+    public class CustomRenderer: Xamarin.Forms.Platform.Android.ViewRenderer, ISurfaceHolderCallback
     {
         private Android.Views.SurfaceView surf;
         private DroidVid.BufferPlayer bp;
@@ -34,6 +35,8 @@ namespace DoidVid.Droid
                 surf = new SurfaceView(Context);
 
                 base.SetNativeControl(surf);
+
+                surf.Holder.AddCallback(this);
             }
         }
 
@@ -43,13 +46,6 @@ namespace DoidVid.Droid
 
 
             Android.Util.Log.Debug(this.GetType().Name, "OnAttachedToWindow()");
-
-            //Set the video source.
-            DroidVid.FilePlayer.SAMPLE = SAMPLE;
-
-            bp = new DroidVid.BufferPlayer(surf.Holder.Surface);
-
-            bp.RunAsync();
         }
 
         protected override int[] OnCreateDrawableState(int extraSpace)
@@ -74,6 +70,23 @@ namespace DoidVid.Droid
 
 
             return base.OnApplyWindowInsets(insets);
+        }
+
+        public void SurfaceChanged(ISurfaceHolder holder, Format format, int width, int height)
+        {
+        }
+
+        public void SurfaceCreated(ISurfaceHolder holder)
+        {
+            //Set the video source.
+            DroidVid.FilePlayer.SAMPLE = SAMPLE;
+
+            bp = new DroidVid.BufferPlayer(surf.Holder.Surface);
+            bp.RunAsync();
+        }
+
+        public void SurfaceDestroyed(ISurfaceHolder holder)
+        {
         }
     }
 }

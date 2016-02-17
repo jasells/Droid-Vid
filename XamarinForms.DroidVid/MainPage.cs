@@ -61,9 +61,10 @@ namespace DroidVid.XamarinForms
             await Task.Delay(1000).ConfigureAwait(false);//tick @ 1Hz
             ++count;
 
-
-            Device.BeginInvokeOnMainThread(() => UpdateText());
-
+            lock (this)
+            {
+                Device.BeginInvokeOnMainThread(() => UpdateText());
+            }
 
             Task.Run(() => Tick());//continue next tick
         }
@@ -79,45 +80,48 @@ namespace DroidVid.XamarinForms
             double w = rel.Width;
             double h = rel.Height;
 
-            if (swap)
-            {
-                
-                double tmp = rLocX;
-                rLocX = lLocX;
-                lLocX = tmp;
-
-                tmp = rLocY;
-                rLocY = lLocY;
-                lLocY = tmp;
-
-                tmp = rWidth;
-                rWidth = lWidth;
-                lWidth = tmp;
-
-                tmp = rHeight;
-                rHeight = lHeight;
-                lHeight = tmp;
-            }
-            else
+            lock (this)
             {
 
-                double tmp = lLocX;
-                lLocX = rLocX;
-                rLocX = tmp;
+                if (swap)
+                {
 
-                tmp = lLocY;
-                lLocY = rLocY;
-                rLocY = tmp;
+                    double tmp = rLocX;
+                    rLocX = lLocX;
+                    lLocX = tmp;
 
-                tmp = lWidth;
-                lWidth = rWidth;
-                rWidth = tmp;
+                    tmp = rLocY;
+                    rLocY = lLocY;
+                    lLocY = tmp;
 
-                tmp = lHeight;
-                lHeight = rHeight;
-                rHeight = tmp;
+                    tmp = rWidth;
+                    rWidth = lWidth;
+                    lWidth = tmp;
+
+                    tmp = rHeight;
+                    rHeight = lHeight;
+                    lHeight = tmp;
+                }
+                else
+                {
+
+                    double tmp = lLocX;
+                    lLocX = rLocX;
+                    rLocX = tmp;
+
+                    tmp = lLocY;
+                    lLocY = rLocY;
+                    rLocY = tmp;
+
+                    tmp = lWidth;
+                    lWidth = rWidth;
+                    rWidth = tmp;
+
+                    tmp = lHeight;
+                    lHeight = rHeight;
+                    rHeight = tmp;
+                }
             }
-
 
             Rectangle videoPlace = new Rectangle(w * rLocX, h * rLocY, w * rWidth, h * rHeight);
             

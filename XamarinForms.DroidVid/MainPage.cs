@@ -15,14 +15,14 @@ namespace DroidVid.XamarinForms
 
         public MainPage()
         {
-            rLocX = .65;
+            rLocX = .45;
             rLocY = .01;
-            lLocX = 0.25;
-            lLocY = 0.31;
+            lLocX = 0.15;
+            lLocY = 0.25;
 
-            rWidth = rHeight  = 1.0 / 3;
+            rWidth = rHeight  = 1.0 / 2;
 
-            lHeight = lWidth = 1.0 / 2;
+            lHeight = lWidth = 1.0 / 5;
 
             rel = new RelativeLayout();
 
@@ -45,9 +45,8 @@ namespace DroidVid.XamarinForms
             //add everything in the relative layou to the page
             Content = rel;
 
-            Tick();
+            //Tick();
 
-            //Device.StartTimer(new TimeSpan(0, 0, 1), new Func<bool>(UpdateText));
         }
 
         private async void Tick()
@@ -90,9 +89,11 @@ namespace DroidVid.XamarinForms
                 videoPlace = leftPlace;
                 btnPlace = rightPlace;
 
+                //vv.RelScaleTo(-0.25);
             }
             else
             {
+                //vv.RelScaleTo(0.25);
                 videoPlace = rightPlace;
                 btnPlace = leftPlace;
             }
@@ -102,9 +103,15 @@ namespace DroidVid.XamarinForms
             //move the video view
             //lock (locker)
             {
+                //vv.TranslateTo(videoPlace.X,
+                //                videoPlace.Y);
+
+                //lastMove = btn.TranslateTo(btnPlace.X,
+                //                            btnPlace.Y);
+
                 vv.LayoutTo(videoPlace);
 
-                lastMove = btn.LayoutTo(btnPlace);
+                btn.LayoutTo(btnPlace);
             }
 
             swap = !swap;

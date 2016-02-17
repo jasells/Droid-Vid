@@ -10,6 +10,10 @@ namespace DroidVid.XamarinForms
         Button btn;
         Rectangle leftPlace, rightPlace;
         RelativeLayout rel;
+
+        //change these variables before calling LayoutTo to make sure that 
+        //text changes don't revert to original layout.
+
         double rLocX, rLocY, lLocX, lLocY;
         double rWidth, rHeight, lWidth, lHeight;
 
@@ -26,6 +30,9 @@ namespace DroidVid.XamarinForms
 
             rel = new RelativeLayout();
 
+            //these constraints are called *EVERY* time there is a change in layout, so 
+            //if you want to *permenantly* move views later, you have to update the variables!
+            //Using static vals in these callbacks means your changes won't always stick (if a layout cycle runs).
             rel.Children.Add(vv = new VideoView(),
                 Constraint.RelativeToParent ((parent) => { return parent.Width * rLocX; }),
                 Constraint.RelativeToParent ((parent) => { return parent.Height * rLocY; }),
@@ -45,7 +52,7 @@ namespace DroidVid.XamarinForms
             //add everything in the relative layou to the page
             Content = rel;
 
-            //Tick();
+            Tick();
 
         }
 
@@ -54,19 +61,15 @@ namespace DroidVid.XamarinForms
             await Task.Delay(1000).ConfigureAwait(false);//tick @ 1Hz
             ++count;
 
-            //this is will allow the layout to change, but will stop updates.
-            //if(swap)
-                Device.BeginInvokeOnMainThread(() => UpdateText());
+
+            Device.BeginInvokeOnMainThread(() => UpdateText());
 
 
-            Task.Run(() => Tick());
+            Task.Run(() => Tick());//continue next tick
         }
 
         bool swap = false;
         volatile int count = 0;
-        System.Threading.ManualResetEvent locker = new System.Threading.ManualResetEvent(false);
-
-        Task<bool> lastMove;
 
 
         private async void MoveViews()
@@ -76,52 +79,64 @@ namespace DroidVid.XamarinForms
             double w = rel.Width;
             double h = rel.Height;
 
-            if (rightPlace.Height == 0)
-                rightPlace = new Rectangle(w*rLocX,h*rLocY,w*rWidth,h*rHeight);
-
-            if (leftPlace.Height == 0)
-                leftPlace = new Rectangle(w*lLocX,h*lLocY,w*lWidth,h*lHeight);
-
-            Rectangle videoPlace, btnPlace;
-
             if (swap)
             {
-                videoPlace = leftPlace;
-                btnPlace = rightPlace;
+                
+                double tmp = rLocX;
+                rLocX = lLocX;
+                lLocX = tmp;
 
-                //vv.RelScaleTo(-0.25);
+                tmp = rLocY;
+                rLocY = lLocY;
+                lLocY = tmp;
+
+                tmp = rWidth;
+                rWidth = lWidth;
+                lWidth = tmp;
+
+                tmp = rHeight;
+                rHeight = lHeight;
+                lHeight = tmp;
             }
             else
             {
-                //vv.RelScaleTo(0.25);
-                videoPlace = rightPlace;
-                btnPlace = leftPlace;
+
+                double tmp = lLocX;
+                lLocX = rLocX;
+                rLocX = tmp;
+
+                tmp = lLocY;
+                lLocY = rLocY;
+                rLocY = tmp;
+
+                tmp = lWidth;
+                lWidth = rWidth;
+                rWidth = tmp;
+
+                tmp = lHeight;
+                lHeight = rHeight;
+                rHeight = tmp;
             }
 
-            UpdateText();
+
+            Rectangle videoPlace = new Rectangle(w * rLocX, h * rLocY, w * rWidth, h * rHeight);
+            
+            Rectangle btnPlace = new Rectangle(w * lLocX, h * lLocY, w * lWidth, h * lHeight);
+
 
             //move the video view
-            //lock (locker)
-            {
-                //vv.TranslateTo(videoPlace.X,
-                //                videoPlace.Y);
+            //make the changes immediately, without calling here, changes won't apply until next text change
+            vv.LayoutTo(videoPlace);
 
-                //lastMove = btn.TranslateTo(btnPlace.X,
-                //                            btnPlace.Y);
+            btn.LayoutTo(btnPlace);
 
-                vv.LayoutTo(videoPlace);
-
-                btn.LayoutTo(btnPlace);
-            }
 
             swap = !swap;
         }
 
-        bool UpdateText()
+        void UpdateText()
         {
             btn.Text = count+" s";
-
-            return true;
         }
 
         protected override void OnAppearing()

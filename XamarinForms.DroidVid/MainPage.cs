@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace DroidVid.XamarinForms
@@ -44,12 +44,36 @@ namespace DroidVid.XamarinForms
 
             //add everything in the relative layou to the page
             Content = rel;
+
+            Tick();
+
+            //Device.StartTimer(new TimeSpan(0, 0, 1), new Func<bool>(UpdateText));
         }
 
-        bool swap = true;
-
-        private void MoveViews()
+        private async void Tick()
         {
+            await Task.Delay(1000).ConfigureAwait(false);//tick @ 1Hz
+            ++count;
+
+            //this is will allow the layout to change, but will stop updates.
+            //if(swap)
+                Device.BeginInvokeOnMainThread(() => UpdateText());
+
+
+            Task.Run(() => Tick());
+        }
+
+        bool swap = false;
+        volatile int count = 0;
+        System.Threading.ManualResetEvent locker = new System.Threading.ManualResetEvent(false);
+
+        Task<bool> lastMove;
+
+
+        private async void MoveViews()
+        {
+            //++count;
+
             double w = rel.Width;
             double h = rel.Height;
 
@@ -65,6 +89,7 @@ namespace DroidVid.XamarinForms
             {
                 videoPlace = leftPlace;
                 btnPlace = rightPlace;
+
             }
             else
             {
@@ -72,11 +97,24 @@ namespace DroidVid.XamarinForms
                 btnPlace = leftPlace;
             }
 
+            UpdateText();
+
             //move the video view
-            vv.LayoutTo(videoPlace);
-            btn.Layout(btnPlace);
+            //lock (locker)
+            {
+                vv.LayoutTo(videoPlace);
+
+                lastMove = btn.LayoutTo(btnPlace);
+            }
 
             swap = !swap;
+        }
+
+        bool UpdateText()
+        {
+            btn.Text = count+" s";
+
+            return true;
         }
 
         protected override void OnAppearing()

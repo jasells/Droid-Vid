@@ -28,9 +28,9 @@ namespace DoidVid.Droid
         protected override void OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs<Xamarin.Forms.View> e)
         {
             Android.Util.Log.Debug(this.GetType().Name, "OnElementChanged()");
-            var s = Android.OS.Build.VERSION.Sdk;
-            Android.Util.Log.Debug("Android API (int): ", s);
-            Android.Util.Log.Debug("Android API : ", ""+Android.OS.Build.VERSION.SdkInt);
+
+            Android.Util.Log.Debug("Android API-int: ", Android.OS.Build.VERSION.Sdk);
+            Android.Util.Log.Debug("Android API build: ", ""+Android.OS.Build.VERSION.SdkInt);
             Android.Util.Log.Debug("Android API: ", Android.OS.Build.VERSION.Codename);
 
             //first call into this method, the render was just created?
@@ -91,6 +91,7 @@ namespace DoidVid.Droid
 
         public void SurfaceDestroyed(ISurfaceHolder holder)
         {
+            bp.running = false;//stop the player
         }
     }
 }

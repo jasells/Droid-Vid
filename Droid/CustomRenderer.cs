@@ -19,6 +19,7 @@ namespace DoidVid.Droid
 {
     public class CustomRenderer: Xamarin.Forms.Platform.Android.ViewRenderer, ISurfaceHolderCallback
     {
+        private Xamarin.Forms.View myV;
         private Android.Views.SurfaceView surf;
         private DroidVid.BufferPlayer bp;
         private static string dir = "/mnt/extSdCard/";//"/Removable/MicroSD/";//"/mnt/shared/extSdCard/";//
@@ -33,15 +34,49 @@ namespace DoidVid.Droid
             Android.Util.Log.Debug("Android API build: ", ""+Android.OS.Build.VERSION.SdkInt);
             Android.Util.Log.Debug("Android API: ", Android.OS.Build.VERSION.Codename);
 
+
+
             //first call into this method, the render was just created?
             if (e.OldElement == null)
             {
                 surf = new SurfaceView(Context);
 
+                myV = e.NewElement;//capture our Xamarin View.
+
+                Android.Util.Log.Debug("X =", myV.X.ToString());
+
+                myV.SizeChanged += myV_SizeChanged;
+                myV.PropertyChanged += myV_PropertyChanged;
+
                 base.SetNativeControl(surf);
 
                 surf.Holder.AddCallback(this);
             }
+        }
+
+
+        void myV_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            Android.Util.Log.Debug(myV.GetType().Name, e.PropertyName+ " changed ");
+
+            if(e.PropertyName =="X")
+                Android.Util.Log.Debug("X =", myV.X.ToString());
+
+            if (e.PropertyName == "Scale")
+            {
+                Android.Util.Log.Debug("Scale =", myV.Scale.ToString());
+
+                //surf.ScaleX = (float)myV.Scale;
+                //surf.ScaleY = (float)myV.Scale;
+
+                //this.Layout(0,0,0,0);
+            }
+
+        }
+
+        void myV_SizeChanged(object sender, EventArgs e)
+        {
+            Android.Util.Log.Debug(myV.GetType().Name, "sizechanged event");
         }
 
         protected override void OnAttachedToWindow()
@@ -67,6 +102,8 @@ namespace DoidVid.Droid
 
         }
 
+        
+
         public override WindowInsets OnApplyWindowInsets(WindowInsets insets)
         {
             Android.Util.Log.Debug(this.GetType().Name, "OnApplyWindowInsets()");
@@ -78,6 +115,7 @@ namespace DoidVid.Droid
 
         public void SurfaceChanged(ISurfaceHolder holder, Format format, int width, int height)
         {
+
         }
 
         public void SurfaceCreated(ISurfaceHolder holder)

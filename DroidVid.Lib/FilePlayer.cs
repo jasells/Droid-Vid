@@ -134,7 +134,7 @@ namespace DroidVid
 
     public class FilePlayer :Player
     {
-        public static string dir = "/Removable/MicroSD/";//"/mnt/shared/extSdCard/";//
+        public static string dir = "/mnt/shared/extSdCard/";//"/Removable/MicroSD/";//
         public static string SAMPLE = dir + "Video_2014_5_6__16_51_56.mp4";//dir+"Video_2014_5_6__16_51_56.mp4";//
 
 
